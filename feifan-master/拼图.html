@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: bisque;
+			}
+			
+			.game{
+				width: 800px;
+				height: 600px;
+				margin: 30px auto;
+			}
+			.demo{
+				height: 200px;
+				
+			}
+			.content{
+				height: 400px;
+				
+			}
+			.content .item{
+				width: 196px;
+				height: 96px;
+				margin: 2px;
+				float: left;
+				background-color: blue;
+				background-image: url(img/5233935_082810028156_2.jpg);
+				background-size: 800px 400px;
+			}
+			.item-0{
+			 	background-position: 0px 0px;
+			 }
+			 .item-1{
+			 	background-position: -200px 0px;
+			 }
+			 .item-2{
+			 	background-position: -400px 0px;
+			 }
+			 .item-3{
+			 	background-position: -600px 0px;
+			 }
+			 .item-4{
+			 	background-position: 0px -100px;
+			 }
+			 .item-5{
+			 	background-position: -200px -100px;
+			 }
+			 .item-6{
+			 	background-position: -400px -100px;
+			 }
+			 .item-7{
+			 	background-position: -600px -100px;
+			 }
+			 .item-8{
+			 	background-position: 0px -200px;
+			 }
+			 .item-9{
+			 	background-position: -200px -200px;
+			 }
+			 .item-10{
+			 	background-position: -400px -200px;
+			 }
+			 .item-11{
+			 	background-position: -600px -200px;
+			 }
+			 .item-12{
+			 	background-position: 0px -300px;
+			 }
+			 .item-13{
+			 	background-position: -200px -300px;
+			 }
+			 .item-14{
+			 	background-position: -400px -300px;
+			 }
+			 .item-15{
+			 	background-image: none!important;	
+			 	opacity: 0;		 }
+		</style>
+	</head>
+	<body>
+		<div class="game">
+			<div class="demo">
+				<img src="img/5233935_082810028156_2.jpg" height="200px" />
+			</div>
+			<div class="content">
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var items = $(".content .item");
+				var status = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+				//打乱其位置
+				status.sort(function(a,b){return 0.5-Math.random(); });
+				for(var i in items){
+					items.eq(i).addClass("item-"+status[i]);
+				}
+				
+				$(document).keyup(function(e){
+					var keyCode = e.keyCode;
+					$(".item:animated").stop(true,true);    //清除动画未做完的动作
+					switch(keyCode){
+						case 37:left();break;
+						case 38:up();break;
+						case 39:right();break;
+						case 40:down();break;
+					}
+					
+					//检查已完成的函数
+					
+				});
+				
+				//?????????????????????????????
+				//1.找到空白位置
+				//2.判断方向是否能完成
+				//3.移动图片
+				//4.改变状态数组
+				
+				function left(){
+					for(var i in status){
+						i = parseInt(i);
+						if(status[i] == 15){
+							if(i%4==3){
+								return;
+							}
+							var index = i;
+							items.eq(index+1).animate({right:"200px"},500,function(){
+							//gai改变类名
+							items.eq(index+1).css("right","0px").attr("class","item item-15");
+							items.eq(index).addClass("item-"+status[index+1]).removeClass("item-15");
+							
+							//改变状态数组
+							status[index] = status[index+1];
+							status[index+1] = 15;
+							});
+						}
+					}
+					return;
+				}
+				function right(){
+					for(var i in status){
+						i = parseInt(i);
+						if(status[i] == 15){
+							if(i%4==0){
+								return;
+							}
+							var index = i;
+							items.eq(index-1).animate({right:"200px"},500,function(){
+							//gai改变类名
+							items.eq(index-1).css("left","0px").attr("class","item item-15");
+							items.eq(index).addClass("item-"+status[index-1]).removeClass("item-15");
+							
+							//改变状态数组
+							status[index] = status[index-1];
+							status[index-1] = 15;
+							});
+						}
+					}
+					return;
+				}
+				function up(){
+					for(var i in status){
+						i = parseInt(i);
+						if(status[i] == 15){
+							if(i>11){
+								return;
+							}
+							var index = i;
+							items.eq(index+4).animate({bottom:"100px"},500,function(){
+							//gai改变类名
+							items.eq(index+4).css("bottom","0px").attr("class","item item-15");
+							items.eq(index).addClass("item-"+status[index+4]).removeClass("item-15");
+							
+							//改变状态数组
+							status[index] = status[index+4];
+							status[index+4] = 15;
+							});
+						}
+					}
+					return;
+					
+				}
+				function down(){
+					for(var i in status){
+						i = parseInt(i);
+						if(status[i] == 15){
+							if(i<4){
+								return;
+							}
+							var index = i;
+							items.eq(index-4).animate({top:"100px"},500,function(){
+							//gai改变类名
+							items.eq(index-4).css("top","0px").attr("class","item item-15");
+							items.eq(index).addClass("item-"+status[index-4]).removeClass("item-15");
+							
+							//改变状态数组
+							status[index] = status[index-4];
+							status[index-4] = 15;
+							});
+						}
+					}
+					return;
+				}
+				
+			});
+			
+			
+		</script>
+	</body>
+</html>

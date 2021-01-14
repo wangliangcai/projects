@@ -1,0 +1,228 @@
+/*搜索框开始*/
+.bot-top{
+	width: 100%;
+	height: 1.25rem;
+	padding: 0 5%;
+	background: url(../img/beijing.png) no-repeat;
+	/*background-color: #65cbbd;*/
+	background-size: 100% 100%;
+}
+
+/*搜索框结束*/
+.bot-top .search-ss{
+	width: 100%;
+	height: .45rem;
+	padding: .05rem 0;
+}
+
+.bot-top .search-ss .glyphicon-th-list{
+	font-size: .2rem;
+	color: #fff;
+	font-weight: normal;
+	line-height: .35rem;
+}
+.bot-top .search-ss .atp{
+	outline: none;
+	width: 88%;
+	height: .35rem;
+	border: none;
+	padding: 0 0 0 .3rem;
+	border-radius: .5rem;
+	font-size: .14rem;
+	line-height: .35rem;
+	color: #333;
+	border: solid 1px #77bfb4;
+	/*background: ;*/
+	background: url(../img/more01.png) no-repeat /*#f3ffd7*/;
+}
+
+/*主人开始*/
+.net-repp{
+	width: 100%;
+	height: .7rem;
+	margin-top: .05rem;
+}
+.net-repp .texsj{
+	width: 100%;
+	height: .45rem;
+	padding: 0 0 .05rem 0;
+}
+
+.net-repp .texsj .expression{
+	width: .4rem;
+	height: .4rem;
+	display: block;
+	position: relative;
+	border-radius: 50%;
+	box-shadow: 0 .005rem 0 .005rem rgba(0,0,0,0.1); 	/* Safari 5.1 - 6.0 */
+    /*background: -webkit-linear-gradient(#fff, blue);
+    background: -moz-linear-gradient(#fff, blue);
+    background: -o-linear-gradient(#fff, blue);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(blue));
+    background: linear-gradient(#fff, blue); /* Opera 11.1 - 12.0 */*/    /* Firefox 3.6 - 15 */    /* 标准的语法 */
+	background: -webkit-radial-gradient(circle, #fff,#fdfdfd, #d2d6d7); /* Safari 5.1 - 6.0 */
+	background: -o-radial-gradient(circle, #fff,#fdfdfd, #d2d6d7); /* Opera 11.6 - 12.0 */
+	background: -moz-radial-gradient(circle, #fff,#fdfdfd, #d2d6d7); /* Firefox 3.6 - 15 */
+	background: radial-gradient(circle, #fff,#fdfdfd, #d2d6d7); /* 标准的语法 */
+}
+/*主人结束*/
+.net-repp .texsj .expression:after,
+.net-repp .texsj .expression:before{
+	position: absolute;
+	width: .04rem;
+	height:.04rem;
+	content: "";
+	border-radius: 50%;
+	background-color: #343434;
+}
+/*右眼*/
+.net-repp .texsj .expression:after{
+	top: .1rem;
+	right: .04rem;
+}
+/*左眼*/
+.net-repp .texsj .expression:before{
+	top: .14rem;
+	right: .1rem;
+}
+.net-repp .texsj .dialog-box{
+	width: 80%;
+	height: .4rem;
+	position: relative;
+	padding: .1rem .2rem;
+	font-size: .14rem;
+	background-color: #ddeee1;
+	border-radius: .1rem;
+}
+.net-repp .texsj .dialog-box:after{
+	width: 0;
+	height: 0;
+	content: "";
+	position: absolute;
+	top: .12rem;
+	left: -.08rem;
+	border-top: .08rem solid transparent;
+	border-right: .12rem solid #ddeee1;
+	border-bottom: .08rem solid transparent;
+}
+.net-repp .texsj .dialog-box em,
+.net-repp .texsj .dialog-box a{
+	font-size: .14rem;
+	line-height: .2rem;
+	color: #333;
+	font-style: normal;
+}
+.net-repp .texsj .dialog-box a{
+	color: #50b8e4;
+}
+/*任务开始*/
+.net-repp .task{
+	height: .2rem;
+	text-align: center;
+	margin-top: .02rem;
+}
+.net-repp .task li{
+	height: .2rem;
+	float: left;
+	border-radius: .05rem;
+	padding: 0 .1rem;
+	background-color: #fff;
+	margin-left: .15rem;
+}
+.net-repp .task li i,
+.net-repp .task li a,
+.net-repp .task li span{
+	color: #3f9ae3;
+	font-size: .12rem;
+	line-height: .2rem;
+
+}
+.net-repp .task li i{
+	margin-right: .05rem;
+}
+/*任务结束*/
+/*添加开始*/
+.Add-to{
+	width: 100%;
+	display: inline-block;
+	padding: .3rem 5%;
+	position: relative;
+	/*background:-moz-linear-gradient(top, #f3ffd9, #fdfff9);*/  
+    /*background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ff0000), to(#f3ffd9));*/  
+    /*background:-o-linear-gradient(top, #f3ffd9, #fdfff9);*/ 
+}
+.Add-to:after{
+	width: 100%;
+	height: .3rem;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(to top, #fff,#f3ffd9);
+}
+
+.Add-to .add-toul{
+	width: 100%;
+}
+.Add-to .add-toul li{
+	width: 31%;
+	padding: 0;
+	float: left;
+	overflow: hidden;
+	/*display: inline-block;*/
+	border-radius: .1rem;
+	/*background-color: #fff;*/
+	margin: 0 3.5% .15rem 0;
+}
+.Add-to .add-toul li:nth-child(3n){
+	margin: 0 0 .15rem 0;
+}
+.Add-to .add-toul li img{
+	width: 100%;
+	height: 1.05rem;
+	border-radius: .1rem;
+}
+.Add-to .add-toul li p{
+	margin-top: 0.1rem;
+	width: 100%;
+	height: .32rem;
+	float: left;
+	padding: 0 .05rem;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 0.12rem;
+	line-height: 0.16rem;
+	color: #8a8a8a;
+}
+.Add-to .tianj-add{
+	width: 31%;
+	height: 1.38rem;
+	float: left;
+	border-radius: .1rem;
+	margin: 0 0 .15rem 0;
+	text-align: center;
+	background-color: #ededed;
+}
+.Add-to .tianj-add .glyphicon-plus{
+	margin-top: .35rem;
+	font-size: .36rem;
+	width: 100%;
+	color: #cbcbcb;
+}
+.Add-to .tianj-add em{
+	font-size: .14rem;
+	width: 100%;
+	color: #cbcbcb;
+}
+/*添加结束*/
+
+/*/////////////轻松的书籍开始/////////////
+ * ///////////////
+ * //////////////////*/
+
+/*/////////////轻松的书籍结束/////////////
+ * ///////////////
+ * //////////////////*/

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+		<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/??sm.min.css,sm-extend.min.css">
+	    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tanchuceng.css"/>
+		<link rel="stylesheet" type="text/css" href="css/liebiao.css"/>
+		<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sf.js" type="text/javascript" charset="utf-8"></script>
+		<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+	</head>
+	<body>
+		
+		<div class="page">
+			   <header class="bar bar-nav">
+				    <a class="button button-link button-nav pull-left" href="intex.html" data-transition='slide-out'>
+				      <span class="icon">X</span>
+				    </a>
+				   <a class="button button-link button-nav pull-right" href="/demos/card" data-transition='slide-out'>
+				      <span class="icon"><img src="img/icon-me03.png"/></span>
+				    </a>
+				    <!--<h1 class="title">个人中心</h1>-->
+				  </header>
+			  
+			  <div class="content signin">
+			  	
+					<div class="baodan-zfu">
+						
+						<div class="bao-zfapp">
+							<span class="name-szf">被保人</span>
+							<span class="ming-zfr">尔康搓脚</span>
+						</div>
+						
+						<div class="bao-zfapp">
+							<span class="name-szf">订单单号</span>
+							<span class="ming-dhaos">1234567891011</span>
+						</div>
+						
+						<div class="bao-zfapp">
+							<span class="name-szf">订单金额</span>
+							<span class="ming-yuansz"><em class="yuan-szi">100</em>元</span>
+						</div>
+						
+						<p class="jis-fk"><em class="xi-jingt">*</em>请您及时付款，以便完成投保</p>
+
+					</div>
+					<div class="baodan-yinhangk">
+						<h4 class="xuan-zefs">
+							请选择付款方式
+						</h4>
+						<!--1-->
+						<div class="zhifi-yinhang">
+							<div class="shunshou-img"><img src="img/icons_07.jpg"/></div>
+							<div class="shunshou-text">
+								<h5 class="shou-zhifu">顺手付支付</h5>
+								<p class="kuai-shou">顺丰专用，快捷方便</p>
+							</div>
+						</div>
+						<!--2-->
+						<div class="zhifi-yinhang weixin-tixe">
+							<div class="weixin-img"><img src="img/icons_14.png"/></div>
+							<div class="weixin-text">
+								<h5 class="wei-zhifu">微信支付</h5>
+								<p class="wei-shou">使用微信进行支付</p>
+							</div>
+							<a href="#"><p class="weixin-tixing">*微信支付限额提醒</p></a>
+						</div>
+						<!--3-->
+						<div class="zhifi-yinhang">
+							<div class="yinlian-img"><img src="img/icons_10.jpg"/></div>
+							<div class="yinlian-text">
+								<h5 class="yinlian-zhifu">银联卡支付</h5>
+								<p class="yinlian-shou">支持储蓄卡、信用卡、无需开通网银</p>
+							</div>
+						</div>
+						<button class="zhifi-ybutton">
+							提交
+						</button>
+					</div>
+			  
+			  
+			  
+		</div>
+	</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+//	点击替换div样式
+	$(document).ready(function(){
+	    $(".baodan-yinhangk .zhifi-yinhang").click(function(){
+	    $(this).addClass('xuan-zyangs').siblings().removeClass('xuan-zyangs');
+	    });
+});
+
+</script>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.clock{
+				width: 500px;
+				height: 500px;
+				position: relative;
+				margin: 100px auto;
+			}
+			.clock img{
+				width: inherit;
+				height: inherit;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<img src="img/fen-1.fw.png" />
+			<img src="img/hour.png" id="huor" />
+			<img src="img/minute.png" id="minute" />
+			<img src="img/second.png" id="second" />
+			<img src="img/center.png" />
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/jquery.rotate.min.js" ></script>
+		<script type="text/javascript">
+			setTimeNow()
+			setInterval(function(){
+				setTimeNow();
+			},1000);
+			//获取当前时间
+			function setTimeNow(){
+				var now = new Date();
+				var h = now.getHours();
+				var m = now.getMinutes();
+				var s = now.getSeconds();
+				
+				//计算时分秒针的选择角度
+				
+				$("#second").rotate(6*s); //，秒        
+				$("#minute").rotate(6*m + s/10);// 
+				$("#huor").rotate(30*h+m/2); //
+				
+			}
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+	</body>
+</html>

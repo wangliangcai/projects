@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			.box{
+				height: 378px;
+				width: 640px;
+				margin: 50px auto;
+				position: relative;
+				border: solid 1px black;
+			}
+			
+			.box:hover{
+				border-color:  red;
+			}
+			
+			.box img{
+				width: inherit;
+				height: inherit;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.box img:not(:first-child){
+				display: none;
+			}
+			
+			.box .mask{
+				width: inherit;
+				height: inherit;
+				/*background-color: red;*/
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 999;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<div class="mask">
+				
+			</div>
+			<img src="img/itouch(0).jpg">
+		</div>
+		
+		<script type="text/javascript">
+			var box = document.getElementsByClassName("mask")[0];
+			for(var i = 1; i<=77;i++){
+				var img = document.createElement("img");
+				img.setAttribute("src","img/itouch("+i+").jpg");
+				document.getElementsByClassName("box")[0].appendChild(img);
+			}
+			var images = document.getElementsByTagName("img");
+			var index = 0 ;
+			
+			
+			var t = setInterval(function(){
+				left();
+			},40);
+			
+			function left(){
+				images[index].style.display = "none";
+				index = (index+1)%78;
+				images[index].style.display = "block";
+			}
+			
+			function  right(){
+				images[index].style.display = "none";
+				index = (index+78-1)%78;
+				images[index].style.display = "block";
+			}
+			
+			// 1.鼠标悬停  停止旋转
+			box.onmouseenter = function(){
+				clearInterval(t);
+			}
+			
+			box.onmouseleave = function(){
+				t = setInterval(function(){
+					left();
+				},40)
+			}
+			
+			// 2.鼠标拖动改变其旋转方向
+			var flag = false;
+			var x = 0;
+			
+			
+			// 鼠标左键按下
+			box.onmousedown = function(e){
+				flag = true;
+				x = e.clientX;
+			}
+			
+			// 鼠标拖动
+			box.onmousemove = function(e){
+				if(flag){
+					if(x<e.clientX){
+						right();
+					}else{
+						left();
+					}
+				}
+				x = e.clientX;
+			}
+			
+			// 鼠标左键松开
+			box.onmouseup = function(){
+				flag = false;
+			}
+			// 鼠标移开
+			box.onmouseout = function(){
+				flag = false;
+			}
+			
+			
+		</script>
+	</body>
+</html>

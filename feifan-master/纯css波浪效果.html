@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>纯css波浪效果</title>
+		<style type="text/css">
+			.now{
+				width: 500px;
+				height: 500px;
+				margin: 100px auto;
+				position: relative;
+			}
+			.wave{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background-color: navajowhite;
+				border-radius: 50%;
+				overflow: hidden;
+				}
+			
+			.after{
+				content: "";
+				position: absolute;
+				width: 400px;
+				height: 400px;
+				top: 0;
+				height: 100%;
+				opacity：0.1;
+				background-color: rgba(255,255,255,15);
+				border-radius: 50%;
+				transform: translate(50%,70%)rotate(0);
+				animation: rotate 15s linear infinite;
+				z-index: 10;
+			}
+			/*.after{
+				border-radius: 47%;
+				background-color: rgba(255,255,255,9);
+				transform: translate(50%,70%)rotate(0);
+				animation: rotate 2s linear 3s infinite;
+				z-index: 20;
+			}*/
+				@keyframes rotate{
+					50%{
+						transform: translate(50%,70%)
+						rotate(180deg);
+						
+					}100%{
+						transform: translate(-100%,-70%)
+						rotate(360%);
+					}
+					
+				}
+			.wave-1{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background-color: #FFC0CB);
+				border-radius: 50%;
+				overflow: hidden;
+				}
+			
+			.after-1{
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				top: 0;
+				height: 100%;
+				opacity：0.1;
+				background-color: rgba(255,255,255,15);
+				border-radius: 50%;
+				transform: translate(90%,90%)rotate(0);
+				animation: rotate 10s linear infinite;
+				z-index: 10;
+			}
+			/*.after{
+				border-radius: 47%;
+				background-color: rgba(255,255,255,9);
+				transform: translate(50%,70%)rotate(0);
+				animation: rotate 10s linear 5s infinite;
+				z-index: 20;
+			}*/
+				@keyframes rotate{
+					50%{
+						transform: translate(50%,30%)
+						rotate(180deg);
+						
+					}100%{
+						transform: translate(-50%,-90%)
+						rotate(360%);
+					}
+					
+				}
+			.wave-2{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background-color: rgb(118,218,255);
+				border-radius: 50%;
+				overflow: hidden;
+				}
+			
+			.after-2{
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				opacity：0.1;
+				top: 0;
+				height: 100%;
+				background-color: rgba(255,255,255,15);
+				border-radius: 50%;
+				transform: translate(20%,30%)rotate(0);
+				animation: rotate 6s linear infinite;
+				z-index: 10;
+			}
+			/*.after{
+				border-radius: 47%;
+				background-color: rgba(255,255,255,9);
+				transform: translate(50%,70%)rotate(0);
+				animation: rotate 10s linear 5s infinite;
+				z-index: 20;
+			}*/
+				@keyframes rotate{
+					50%{
+						transform: translate(-20%,-70%)
+						rotate(180deg);
+						
+					}100%{
+						transform: translate(20%,20%)
+						rotate(360%);
+					}
+					
+				}
+				.wave-3{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background-color: aquamarine;
+				border-radius: 50%;
+				overflow: hidden;
+				}
+			
+			.after-3{
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				top: 0;
+				height: 100%;
+				background-color: rgba(255,255,255,15);
+				border-radius: 50%;
+				opacity：0.1;
+				transform: translate(-20%,-30%)rotate(0);
+				animation: rotate 23s linear infinite;
+				z-index: 10;
+			}
+			/*.after{
+				border-radius: 47%;
+				background-color: rgba(255,255,255,9);
+				transform: translate(50%,70%)rotate(0);
+				animation: rotate 10s linear 5s infinite;
+				z-index: 20;
+			}*/
+				@keyframes rotate{
+					50%{
+						transform: translate(9%,80%)
+						rotate(180deg);
+						
+					}100%{
+						transform: translate(70%,30%)
+						rotate(360%);
+					}
+					
+				}
+				.wave-4{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				border-radius: 50%;
+				overflow: hidden;
+				}
+			
+			.after-4{
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				top: 0;
+				height: 100%;
+				opacity：0.1;
+				background-color: lavender;
+				border-radius: 50%;
+				transform: translate(50%,50%)rotate(0);
+				animation: rotate 15s linear infinite;
+				z-index: 88;
+			}
+			/*.after{
+				border-radius: 47%;
+				background-color: rgba(255,255,255,9);
+				transform: translate(50%,70%)rotate(0);
+				animation: rotate 10s linear 5s infinite;
+				z-index: 20;
+			}*/
+				@keyframes rotate{
+					50%{
+						transform: translate(-70%,-90%)
+						rotate(200deg);
+						
+					}100%{
+						transform: translate(50%,30%)
+						rotate(360%);
+					}
+					
+				}
+		</style>
+	</head>
+	<body>
+		<div class="now">
+		<div class="after">
+			<div class="wave">
+			</div>
+			
+		</div>
+		
+		
+		<div class="after-1">
+			<div class="wave-1">
+			</div>
+			
+		</div>
+		
+		
+		<div class="after-2">
+			<div class="wave-2">
+			</div>
+			
+		</div>
+		
+		
+		<div class="after-3">
+			<div class="wave-3">
+			</div>
+			
+		
+		</div>
+		
+		
+		<div class="after-4">
+			<div class="wave-4">
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <title>加入书架</title>
+	    <link rel="stylesheet" type="text/css" href="../css/my.css"/>
+	    <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css"/>
+	    <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+	    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css"/>
+	    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="../css/tong.css"/>
+	    <script src="../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="background: #f7f6f1; padding-bottom: .45rem;">
+		
+		<!--免费试读顶部-->
+		<div class="freetrials-top csfudong">
+			
+		  <a href="../paihangban.html" class="glyphicon glyphicon-chevron-left left"></a>
+		    加入书架
+		  <a href="#" class="fa fa-external-link right"></a>
+		
+		</div>
+		
+		<!--底部导航开始-->
+		<div class="bottom-navigation">
+			<ul class="bottomnavigationul">
+				<li class="my-ziliao"><a href="purchasemai.html">购买</a></li>
+				<li><a href="FreeTrials.html">免费试读</a></li>
+				<li><a href="Addabookshelf.html">加入书架</a></li>
+			</ul>
+		</div>
+		<!--底部导航结束-->	
+	</body>
+</html>
+
+<script type="text/javascript">
+	
+	$(document).ready(function (){
+        $(".bottomnavigationul > li").removeClass("my-ziliao");
+        $(".bottomnavigationul > li:eq(2)").addClass("my-ziliao");
+   });
+
+</script>

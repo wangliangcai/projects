@@ -1,0 +1,235 @@
+.tan-diceng{
+	width: 100%;
+	height: 100%;
+	padding: 0 1rem;
+	display: none;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+}
+.tan-diceng .tan-top{
+	width: 100%;
+	margin: 60% auto;
+	display: none;
+	background-color: #fff;
+	z-index: 999;
+}
+.tan-top .ti-tishi{
+	padding: 0 1.5rem;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	text-align: center;
+	color: #DD5041;
+	font-weight: normal;
+}
+.tan-top .you-yuguo{
+	padding: 0 1.5rem;
+	font-size: .8rem;
+	line-height: 1.2rem;
+	color: #919191;
+	margin-bottom: .5rem;
+}
+.danxuan-an{
+	width: 100%;
+	padding: 0 1.5rem;
+	font-size: .7rem;
+	color: #919191;
+	line-height: 1.2rem;
+}
+.an-tan{
+	width: .5rem;
+	height: .5rem;
+	border: 1px solid #ED6561;
+}
+.que-renan{
+	width: 100%;
+	outline: none;
+	border: none;
+	font-size: .9rem;
+	text-align: center;
+	line-height: 1.8rem;
+	background-color: #DD5041;
+	color: #fff;
+	margin-top: 1rem;
+}
+/*拨号*/
+.tan-diceng .bohao{
+	width: 100%;
+	margin: 60% auto;
+	position: relative;
+	display: none;
+	background-color: #fff;
+	z-index: 999;
+}
+.tan-diceng .bohao .ti-tishi{
+	padding: 0 1.5rem;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	text-align: center;
+	color: #DD5041;
+	font-weight: normal;
+}
+.tan-diceng .bohao .you-querem{
+	width: 100%;
+	text-align: center;
+	padding: 0 1.5rem;
+	font-size: .8rem;
+	line-height: 1.2rem;
+	color: #919191;
+	margin-bottom: .5rem;
+}
+.zuoji{
+	color: #DD5041;
+}
+.que-queren,
+.que-quxiaos{
+	width: 50%;
+	outline: none;
+	border: 1px solid #DD5041;
+	font-size: .9rem;
+	text-align: center;
+	line-height: 1.8rem;
+	background-color: #DD5041;
+	color: #fff;
+	margin-top: 1rem;
+}
+.que-queren{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.que-quxiaos{
+	background-color: #fff;
+	color: #DD5041;
+}
+/*退出登录*/
+.tuic-diceng{
+	width: 100%;
+	height: 100%;
+	padding: 0 1rem;
+	display: none;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+}
+.tuic-diceng .tuichu-h{
+	width: 100%;
+	margin: 60% auto;
+	position: relative;
+	display: none;
+	background-color: #fff;
+	z-index: 9999;
+}
+.tuic-diceng .tuichu-h .ti-tishi{
+	padding: 0 1.5rem;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	text-align: center;
+	color: #DD5041;
+	font-weight: normal;
+}
+.tuic-diceng .tuichu-h .you-tuic{
+	width: 100%;
+	text-align: center;
+	padding: 0 1.5rem;
+	font-size: .8rem;
+	line-height: 1.2rem;
+	color: #919191;
+	margin-bottom: .5rem;
+}
+.que-queren,
+.tui-quxiaos{
+	width: 50%;
+	outline: none;
+	border: 1px solid #DD5041;
+	font-size: .9rem;
+	text-align: center;
+	line-height: 1.8rem;
+	background-color: #DD5041;
+	color: #fff;
+	margin-top: 1rem;
+}
+.que-queren{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.tui-quxiaos{
+	background-color: #fff;
+	color: #DD5041;
+}
+/*登录问题弹出框*/
+.yiwen-diceng{
+	width: 100%;
+	height: 100%;
+	padding: 0 1rem;
+	display: none;
+	background-color: #837d7c;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+}
+.yiwen-signm{
+	width: 100%;
+	margin-top: 15%;
+	position: relative;
+	display: none;
+	padding: 1rem;
+	padding-top: 1rem;
+	background-color: #FEFEFE;
+}
+.yiwen-signm:before{
+	position: absolute;
+	top: -1rem;
+	left: 0;
+	width: 35%;
+	height: 2rem;
+	padding-left: 1rem;
+	line-height: 2rem;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 400;
+	content: "登录疑问";
+	background: url(../img/yiwen.png) no-repeat;
+	background-size: 100% 100%;
+}
+.yiwen-signm .yiwen-text{
+	width: 100%;
+	margin-top: .5rem;
+}
+.yiwen-signm .yiwen-text .wen-yi{
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #dd5042;
+	font-weight: 400;
+}
+.yiwen-signm .yiwen-text .yi-duanL{
+	font-size: .6rem;
+	line-height: 1.2rem;
+	color: #9F9FA0;
+}
+.yiwen-signm .yiwen-on{
+	bottom: -2rem;
+	left: 0;
+	width: 100%;
+	height: 2rem;
+	color: #fff;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	position: absolute;
+	text-align: center;
+	line-height: 2rem;
+	background-color: #DD5041;
+}

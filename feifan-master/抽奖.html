@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#lottery{
+				width: 300px;
+				height: 300px;
+				border: solid 1px red;
+				position: relative;
+				margin: 50px auto;
+				overflow: hidden;
+			}
+			#plate{
+				width: inherit;
+				height: inherit;
+				position: absolute;
+			}
+			#static{
+				position: absolute;
+				width: 150px;
+				height: 150px;
+				top: 75px;
+				left: 75px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="lottery">
+			<img src="img/ly-plate.png" id="plate">
+			<img src="img/rotate-static.png" id="static">
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.rotate.min.js" ></script>
+		
+		<script type="text/javascript">
+			
+			$("#static").click(function(){
+				// 1.生成一个随机的旋转角度 ，至少旋转 5圈，时间大于10s
+				
+				// 2. 根据旋转角度计算出中奖的信息
+				var a = Math.random()*360;
+				
+				$("#plate").rotate({
+					angle:0,
+					animateTo:1800+a,
+					duration:10000,
+					easing:$.easing.easeOutBounce,
+					callback:function(){
+						if(a>=90&&a<=135){
+							alert("恭喜您中了二等奖！");
+						}else if(a>=180&&a<=225){
+							alert("恭喜您中了一等奖！");
+						}else if(a>=315&&a<=360){
+							alert("恭喜您中了三等奖！");
+						}else{
+							alert("再接再厉！");
+						}
+					}
+				});
+				
+			});
+			
+			
+		</script>
+	</body>
+</html>

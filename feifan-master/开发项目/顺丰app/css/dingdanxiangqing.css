@@ -1,0 +1,114 @@
+.li-goum{
+	background-color: #DD5041;
+}
+.goum-zhi{
+	color: #fff;
+}
+.order-details{
+	width: 100%;
+	height: 2rem;
+	padding-left: 1rem;
+}
+.order-details .d-order,
+.order-details .order-no{
+	font-size: .7rem;
+	line-height: 2rem;
+	color: #989898;
+	font-style: normal;
+}
+.order-details .order-no{
+	float: left;
+}
+.order-details .order-shen{
+	font-size: .7rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	margin-top: 5px;
+	color: #fff;
+	float: right;
+	padding: 0 1rem;
+	font-style: normal;
+	background: url(../img/flag2_03.png) no-repeat;
+	background-size: 100% 100%;
+}
+/*订单类型*/
+.order-tetx{
+	padding: .5rem 1rem;
+	background-color: #fff;
+	border-top: 2px solid #DD5041;
+	border-bottom: 2px solid #DD5041;
+}
+.order-tetx .zd-order{
+	font-size: 1rem;
+	/*line-height: 2rem;*/
+	color: #DD5041;
+	font-weight: normal;
+}
+.order-tetx .order-shij{
+	font-size: .6rem;
+	/*line-height: 1.2rem;*/
+	color: #989898;
+}
+/*出单列表*/
+.order-footer{
+	width: 100%;
+	/*height: 10rem;*/
+	float: left;
+	padding: .8rem 1rem;
+	background-color: #fff;
+	border-bottom: 1px solid #DD5041;
+}
+.order-footer .orderfooter-b{
+	width: 100%;
+	font-size: .8rem;
+	float: left;
+	line-height: 1.4rem;
+}
+.order-footer .orderfooter-b .footer-L0,
+.order-footer .orderfooter-b .footer-L{
+	float: left;
+	color: #989898;
+}
+.order-footer .orderfooter-b .footer-r{
+	float: right;
+	color: #000;
+}
+.order-footer .orderfooter-b .footer-L0{
+	color: #858585;
+}
+.order-footer .order-xq{
+	font-size: .7rem;
+	line-height: 1.4rem;
+	color: #c03230;
+	text-decoration: underline;
+	float: right;
+}
+.order-footer .xi-xu{
+	border: 1px dashed #e6e5e5;
+}
+.order-bottoms{
+	width: 100%;
+}
+.order-bottoms .cha-orders{
+	width: 50%;
+	text-align: center;
+	float: left;
+	line-height: 1.5rem;
+	font-size: .8rem;
+	color: #DD5041;
+	background-color: #fff;
+	border-bottom: 1px solid #DD5041;
+	border-right: 1px solid #DD5041;
+	border-left: 1px solid #DD5041;
+}
+.order-jiag{
+	/*height: 10rem;*/
+	float: left;
+	padding: .8rem 1rem;
+}
+.order-jiag .orderfooter-b{
+	width: 100%;
+	font-size: .8rem;
+	float: left;
+	line-height: 1.4rem;
+}

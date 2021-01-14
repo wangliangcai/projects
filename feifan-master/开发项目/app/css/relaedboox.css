@@ -1,0 +1,114 @@
+/*头部开始*/
+.relaxed-top{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: .35rem;
+	padding: 0 5%;
+	color: #565656;
+	z-index: 99999;
+	position: fixed;
+	text-align: center;
+	font-size: .14rem;
+	line-height: .35rem;
+	background-color: #f8f8f8;
+}
+.relaxed-top a{
+	color: #82d1be;
+	line-height: .35rem;
+}
+.relaxed-top a:hover{
+	color: #82d1be;
+	text-decoration: none;
+}
+/*头部结束*/
+.relaxed-boox{
+	width: 100%;
+	padding: 0 5%;
+	margin-top: .35rem;
+	border-top: #dfdfdf solid 1px;
+}
+.relaxed-boox .relaxed-ul{
+	width: 100%;
+}
+.relaxed-boox .relaxed-ul li{
+	width: 100%;
+	height: 1.5rem;
+	padding: .2rem 0;
+	float: left;
+	border-bottom: 1px solid #f9f9f7;
+	border-radius: .1rem;
+}
+.relaxed-boox .relaxed-ul li .relaxed-img{
+	width: 30%;
+	height: 1.1rem;
+}
+.relaxed-boox .relaxed-ul li img{
+	width: 100%;
+	height: 100%;
+	border-radius: .05rem;
+}
+.relaxed-boox .relaxed-ul .relaxed-text{
+	width: 67%;
+	height: 1.1rem;
+}
+.relaxed-boox .relaxed-ul .relaxed-text h3{
+	width: 100%;
+	height: .3rem;
+	color: #333;
+	padding: 0 20% 0 0;
+	font-size: .16rem;
+	line-height: .3rem;
+	font-weight: 700;
+	position: relative;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.relaxed-boox .relaxed-ul .relaxed-text .glyphicon-star-empty{
+	top: 0;
+	right: 0;
+	width: 20%;
+	height: .3rem;
+	color: #e6ddb6;
+	font-size: .14rem;
+	line-height: .3rem;
+	position: absolute;
+}
+.relaxed-boox .relaxed-ul .relaxed-text p{
+	width: 100%;
+	height: .4rem;
+	color: #666;
+	overflow: hidden;
+	font-size: 12px;
+	line-height: .2rem;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+}
+.relaxed-boox .relaxed-ul .relaxed-text .app-text{
+	width: 100%;
+	height: .3rem;
+	margin-top: .1rem;
+}
+.relaxed-boox .relaxed-ul .relaxed-text .app-text em,
+.relaxed-boox .relaxed-ul .relaxed-text .app-text .fa-user,
+.relaxed-boox .relaxed-ul .relaxed-text .app-text .head-portrait{
+	font-size: .12rem;
+	line-height: .3rem;
+}
+.relaxed-boox .relaxed-ul .relaxed-text .app-text .head-portrait{
+	color: #666;
+}
+.relaxed-boox .relaxed-ul .relaxed-text .app-text .fa-user{
+	color: #d6dfde;
+	padding: 0 .05rem 0 0;
+}
+.relaxed-boox .relaxed-ul .relaxed-text .app-text em{
+	color: #ced2d5;
+	margin: 0 0 0 .05rem;
+	padding: 0 .05rem;
+	border: 1px solid #f1f1f1;
+	border-radius: .05rem;
+}

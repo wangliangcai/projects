@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.game{
+				width: 600px;
+				height: 400px;
+				margin: 50px auto;
+				background-image: url(img/163138ynpvngssnmgxdnkn.jpg);
+				
+				
+			}
+			.game .cell{
+				width: 18px;
+				height: 18px;
+				margin: 1px;
+				float: left;
+			}
+			.game .snake{
+				background-color: lime;
+				border-radius: 35%;
+			}
+			.game .food{
+				background-color: coral;
+				border-radius:50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="game">
+			<!--<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell snake"></div>
+			<div class="cell snake"></div>
+			<div class="cell snake"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell"></div>
+			<div class="cell food"></div>-->
+		</div>
+		<script type="text/javascript">
+			var content = document.getElementsByClassName("game")[0];
+			var cells = [];
+			var empty = [];//空白数组，记录空白位置
+			var snake = [315];  //蛇的数组
+			var food = 0; //食物
+			var direction = 0;
+			//1利用js动态添加600个方块进去
+			for(var i = 0; i<600; i++) {
+				var c = document.createElement("div");
+				c.setAttribute("class", "cell");
+				content.appendChild(c);
+				empty.push(i);
+				cells.push(c);
+			}
+			//蛇的位置
+			for(var i = 0; i  < snake.length; i++) {
+				cells[snake[i]].setAttribute("class","cell snake");
+				remove(empty,snake[i]);
+			}
+			//随机食物
+			getRandomfood();
+			//2.思考如何存储蛇的状态，数组
+			//3.蛇的移动如何完成
+			function moving(){
+				//左37  上38  右39  下40
+				var next = -1;
+				switch(direction){
+					case 37:next = snake[0]-1; break;
+					case 38:next = snake[0]-30;break;
+					case 39:next = snake[0]+1; break;
+					case 40:next = snake[0]+30;break;
+					default:return;
+				}
+				
+//				function reStart(){
+//					snake = [315];
+//					empty = [];
+//					
+//					for(var i = 0; i < 600; i++){
+//						cells[i].setAttribute("class","cell");
+//						empty.push(i);
+//					}
+//					for(var i = 0; i < snake.length; i++) {
+//						cells[snake[i]].setAttribute("class","cell snake");
+//						remove(empty,snake[i]);
+//						
+//					}
+//					direction = 37;
+//					getRandomfood();
+//					return;
+//				}
+				//检查是否碰撞
+				var res = checkbomp(next);
+				if(!res){
+					alert("game over!");
+					reStart();
+					return;
+				}
+				//吃掉食物
+				if(next==food){
+					snake.unshift(food);
+					cells[food].setAttribute("class","cell snake");
+					getRandomfood();
+					return;
+				}
+				
+				cells[next].setAttribute("class","cell snake");
+				cells[snake[snake.length-1]].setAttribute("class","cell");
+				
+				empty.push(snake[snake.length - 1]);
+				remove(empty,next);
+				
+				snake.pop();
+				snake.unshift(next);
+				
+			}
+			
+			
+			//检查是否碰撞
+			function checkbomp(next) {
+				//装上 上边
+				if(next < 0)
+				return false;
+				//装上下边
+				if(next > 599)
+				return false;
+				//装上 左边
+				if((direction == 37) && (next % 30 == 29))
+				return false;
+				//装上 右边
+				if((direction == 39) && (next % 30 == 0))
+				return false;
+				//装上自己
+				for(var i = 0; i < snake.length; i++) {
+					if(snake[i] == next)
+					return false;
+				}
+				return true;
+			}
+			
+			
+			//随机产生食物的坐标
+			function getRandomfood(){
+				var n = Math.floor(Math.random()*empty.length);
+				food = empty[n];
+				cells[food].setAttribute("class","cell food");
+				remove(empty,food);
+			}
+			//删除数组指定数字的方式
+			function remove(arr,num){
+				for(var i = 0; i < arr.length; i++) {
+					if(arr[i] == num){
+						for(j = i; j < (arr.length - 1); j++) {
+							arr[j] = arr[j + 1];
+						}
+						arr.pop();
+						return;
+					}
+				}
+			}
+			//重启游戏
+			function reStart(){
+				snake = [315];
+				empty = [];
+				for(var i = 0; i < 600; i++) {
+					cells[i].setAttribute("class","cell");
+					empty.push(i);
+				}
+				for(var i = 0; i < snake.length; i++) {
+					cells[snake[i]].setAttribute("class","cell snake");
+					remove(empty,snake[i]);
+				}
+				direction = 0;
+				getRandomfood();
+			}
+			setInterval(function(){
+				moving();
+			},5000);
+			document.getElementsByTagName("body")[0].onkeyup = function(e){
+				var keyCode = e.keyCode;
+				if(snake.length>1){
+					if(Math.abs(keyCode-direction)==2)
+					return;
+				}
+				direction = keyCode;
+				moving();
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,145 @@
+/*支付页面*/
+.baodan-zfu{
+	width: 100%;
+	background-color: #fff;
+	padding: 0 1rem;
+	border-bottom: 1px solid #D2D2D6;
+}
+.baodan-zfu .bao-zfapp{
+	width: 100%;
+	height: 2rem;
+}
+.baodan-zfu .bao-zfapp .name-szf{
+	font-size: 1rem;
+	line-height: 2rem;
+}
+.baodan-zfu .bao-zfapp .name-szf{
+	float: left;
+	color: #333;
+}
+.baodan-zfu .bao-zfapp .ming-dhaos,
+.baodan-zfu .bao-zfapp .ming-yuansz,
+.baodan-zfu .bao-zfapp .ming-zfr{
+	float: right;
+	color: #919191;
+	font-size: .8rem;
+	line-height: 2rem;
+}
+.baodan-zfu .bao-zfapp .yuan-szi{
+	font-size: 1.2rem;
+	line-height: 2rem;
+	font-weight: 400;
+	font-style: normal;
+	color: #D14f40;
+}
+.baodan-zfu .jis-fk{
+	font-size: 0.7rem;
+	line-height: 2rem;
+	margin-bottom: .5rem;
+	color: #D14F40;
+}
+.baodan-zfu .xi-jingt{
+	margin-right: .6rem;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.baodan-yinhangk{
+	width: 100%;
+	padding: 0 1rem;
+}
+
+.baodan-yinhangk .xuan-zefs{
+	margin-top: .5rem;
+	font-size: 1rem;
+	line-height: 3rem;
+	color: #333;
+}
+.baodan-yinhangk .zhifi-yinhang{
+	width: 100%;
+	height: 3rem;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+}
+.baodan-yinhangk .zhifi-yinhang .shunshou-img,
+.baodan-yinhangk .zhifi-yinhang .weixin-img,
+.baodan-yinhangk .zhifi-yinhang .yinlian-img{
+	width: 20%;
+	height: 3rem;
+	margin-left: 8%;
+	text-align: center;
+	padding: .5rem 0;
+	float: left;
+}
+.baodan-yinhangk .zhifi-yinhang .shunshou-img img{
+	width: 4rem;
+	height: 2rem;
+}
+.baodan-yinhangk .zhifi-yinhang .weixin-img img{
+	width: 2.5rem;
+	height: 2rem;
+}
+.baodan-yinhangk .zhifi-yinhang .yinlian-img img{
+	width: 3.7rem;
+	height: 2rem;
+}
+.baodan-yinhangk .zhifi-yinhang .shunshou-text,
+.baodan-yinhangk .zhifi-yinhang .weixin-text,
+.baodan-yinhangk .zhifi-yinhang .yinlian-text{
+	width: 60%;
+	margin-right: 10%;
+	float: right;
+	text-align: right;
+}
+.baodan-yinhangk .zhifi-yinhang .shunshou-text .shou-zhifu,
+.baodan-yinhangk .zhifi-yinhang .weixin-text .wei-zhifu,
+.baodan-yinhangk .zhifi-yinhang .yinlian-text .yinlian-zhifu{
+	letter-spacing: 5px; /*间距*/
+	font-size: .9rem;
+	line-height: 1.5rem;
+	color: #929292;
+}
+.baodan-yinhangk .zhifi-yinhang .shunshou-text .kuai-shou,
+.baodan-yinhangk .zhifi-yinhang .weixin-text .wei-shou,
+.baodan-yinhangk .zhifi-yinhang .yinlian-text .yinlian-shou{
+	/*letter-spacing: 5px;*/
+	font-size: .6rem;
+	line-height: 1.5rem;
+	color: #929292;
+}
+/*定位*/
+.baodan-yinhangk .zhifi-yinhang .weixin-tixing{
+	width: 100%;
+	height: 1rem;
+	position: absolute;
+	bottom: -1rem;
+	right: 0;
+	color: #5ab735;
+	text-decoration: underline;
+	padding-right: 10%;
+	font-size: .6rem;
+	line-height: 1rem;
+	text-align: right;
+}
+.weixin-tixe{
+	position: relative;
+	margin-bottom: 2rem !important;
+}
+/*选中后样式*/
+.xuan-zyangs{
+	border: 1px solid #DD5041; 
+}
+.zhifi-ybutton{
+	width: 100%;
+	height: 2rem;
+	font-size: 1rem;
+	line-height: 2rem;
+	color: #FFF;
+	outline: none;
+	border: none;
+	letter-spacing: 1rem;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #DD5041;
+}

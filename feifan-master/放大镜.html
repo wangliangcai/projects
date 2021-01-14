@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			.box{
+				width: 200px;
+				height: 300px;
+				position: relative;
+			}
+			.box img{
+				width: inherit;
+				height: inherit;
+			}
+			
+			.mask{
+				display: none;
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background-color: rgba(0,255,0,0.4);
+			}
+			
+			.demo{
+				display: none;
+				width: 300px;
+				height: 300px;
+				border: solid 1px black;
+				position: absolute;
+				top: 0px;
+				left: 200px;
+				background-repeat: no-repeat;
+				background-position: 0px 0px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<img src="img/fgg.png">
+			<div class="mask"></div>
+			<div class="demo"></div>
+		</div>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				
+				var box = document.getElementsByClassName("box")[0];
+				var mask = box.getElementsByClassName("mask")[0];
+				var demo = box.getElementsByClassName("demo")[0];
+				var img = box.getElementsByTagName("img")[0].getAttribute("src");
+				
+				// 鼠标进入 显示
+				box.onmouseenter = function(){
+					
+					mask.style.display = "block";
+					demo.style.display = "block";
+					demo.style.backgroundImage = "url("+img+")";
+					demo.style.backgroundSize = "750px 1125px";
+				}
+				
+				//鼠标移开隐藏
+				box.onmouseleave = function(){
+					mask.style.display = "none";
+					demo.style.display = "none";
+				}
+				
+				box.onmousemove = function(e){
+					
+					var x = e.clientX -this.offsetLeft;
+					var y = e.clientY - this.offsetTop;
+					
+					// 1. 让 mask 绿色区域跟着你的鼠标走。
+					// 避免 x y 越界 。重置其范围
+					x = x<40?40:x;
+					y = y<40?40:y;
+					
+					x = x>160?160:x;
+					y = y>260?260:y;
+					
+					mask.style.left = x-40+"px";
+					mask.style.top = y-40+"px";
+					// 2. demo 放入左边的图片并进行放大，显示其放大后的效果
+					demo.style.backgroundPosition = ((x-40)*-3.75)+"px "+((y-40)*-3.75)+"px";
+				}
+				
+				
+				
+				
+			}
+			
+			
+		</script>
+	</body>
+</html>

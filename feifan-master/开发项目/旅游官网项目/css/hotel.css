@@ -1,0 +1,652 @@
+.panel{
+	-webkit-box-shadow: none; 
+    box-shadow:none; 
+}
+.panel-body-bar{
+	margin: 0 15px 0 15px;
+	padding: 5px 0 20px 0 ;
+}
+.panel-box{
+	margin-top: 10px;
+	/*border: 1px solid #ddd;*/
+}
+.panel-bar{
+	position: relative;
+	margin: 10px 15px;
+	padding: 10px 0px;
+	border-bottom: 1px solid #ddd;
+}
+.panel-title{
+	font-size: 30px;
+}
+.panel-title-en-bar{
+	padding: 7px 0 7px 0;
+}
+.panel-title-en{
+	text-transform: uppercase;
+	padding-right: 10px;
+}
+.panel-title-en-bar .glyphicon-star,.hotel_address_tip{
+	color: #F18F00;
+}
+.pinFen_bar{
+	position: absolute;
+	bottom: 2px;
+	right: 15px;
+}
+.mark_bar{
+	text-align: right;
+	border-bottom: 1px dashed #ccc;
+	margin: 0 0 5px;
+}
+.marks_bar{
+	color: #3193CF;
+	font-weight: bold;
+}
+.marks{
+	color: #F18F00;
+	font-size: 30px;
+	padding-right: 5px;
+}
+.marks-form{
+	color: green;
+	padding-right: 5px;
+}
+.hotel_info{
+	font-size: 14px;
+	text-align: justify;
+	text-indent: 28px;
+	width: 100%;
+	height: 160px;
+	overflow: hidden;
+}
+
+.hotel_alls_title{
+	border-bottom: 1px solid #ddd; 
+}
+.hotel_alls_title span{
+	font-size: 16px;
+	padding-right:5px; 
+}
+.hotel_alls_ul{
+	margin: 20px 0px;
+}
+.hotel_alls_ul li{
+	float: none;
+	padding: 5px 0 5px 0;
+}
+.hotel_alls_ul_ul li{
+	float: left;
+}
+.hotel_alls_ul dt{
+	display: inline;
+}
+
+/*介绍*/
+.hotel_intruct {
+	position: relative;
+	margin-top: 10px;
+	padding: 0px 15px 0 15px;
+}
+.hotel_intruct img{
+	border-radius: 2px;
+}
+.jd_hotels,.jda_hotels{
+	padding: 0 5px 5px 0;
+	overflow: hidden;
+}
+.jdv_hotels,.jds_hotels {
+	padding: 0 0 5px 5px;
+	overflow: hidden;
+}
+.jda_hotels:hover,.jds_hotels:hover,.jd_hotels:hover,.jdv_hotels:hover img{
+	filter: brightness(0.8);
+	transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+}
+.jd_hotels_num {
+	width: 60px;
+	height: 60px;
+	line-height: 50px;
+	text-align: center;
+	font-style: normal;
+	background: rgba(0,0,0,.3);
+	color: white;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.jd {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+/*link*/
+.link_counts {
+	text-align: right;
+}
+.link_bar {
+	margin-top: 20px;
+}
+.link_a {
+	font-size: 16px;
+	margin-left: 50px;
+}
+.link_a_pinlun{
+	display: inline-block;
+	margin-right: 50px;
+}
+.link_a_pinlun_ico {
+	display: inline-block;
+	width: 24px;
+	height: 25px;
+	background: url(../images/hotel-detail-icon7.png) no-repeat -70px -245px;
+}
+.link_a_zan_ico {
+	font-size: 25px;
+	color: #ff9d00;
+}
+.link_a_zan {
+	margin-right: 50px;
+}
+/*link*/
+
+/*table*/
+.hotel_icon{
+	color: #ff9d00;
+}
+.table {
+	margin: 20px 0 0 0;
+}
+.table-bordered {
+	border: 1px dashed #ddd;
+}
+.table th {
+	font-size: 16px;
+	font-weight: 500;
+	border: 1px dashed #ddd !important;
+}
+.table td {
+	width: 250px;
+	padding: 15px !important;
+	border: 1px dashed #ddd !important;
+}
+.jd_hotels_name_bar {
+	padding: 5px 0 5px 0;
+}
+.jd_hotels_name_ico {
+	font-size: 14px;
+	color: #ff9d00;
+}
+.jd_hotels_img_bar {
+	width: 220px;
+	height: 120px;
+}
+.jd_hotels_img_bar img {
+	border-radius: 4px;
+}
+.jd_hotels_zhuke{
+	float: left;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	background: url(../images/hotel-detail-icon7.png) no-repeat -90px -140px;
+}
+.jd_hotels_zhukes {
+	float: left;
+	display: inline-block;
+	width: 22px;
+	height: 20px;
+	margin-right: 5px;
+	background: url(../images/hotel-detail-icon7.png) no-repeat -110px -140px;
+}
+.jd_hotels_zhuke_bar span {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	text-align: justify;
+}
+.jd_hotels_zhence_ol {
+	margin-left: 15px;
+}
+.jd_hotels_zhence_ol li {
+	list-style: inherit;
+}
+.jd_hotels_zhence_ol .imp {
+	color: #ff9d00;
+}
+.jd_hotels_money_bar,.jd_hotels_money {
+	font-size: 20px;
+	color: red;
+}
+/*table*/
+
+/*酒店条例*/
+.hotel_alls_li {
+    border-bottom: 1px dashed #ddd;
+    margin: 0px 0px 10px 0;
+}
+.hotel_alls_li dt {
+	font-size: 16px;
+	font-weight: 500;
+}
+.hotel_alls_li i {
+    font-style: normal;
+}
+
+.hotel_time_s,.hotel_time_e {
+    font-weight: bold;
+    margin-left: 5px;
+}
+.hotel_alls_ul_sheshi li {
+	float: left;
+	margin-right: 40px;
+	height: 30px;
+	line-height: 20px;
+}
+.hotel_alls_ul_sheshi i {
+	display: inline-block;
+	float: left;
+    margin-right: 2px;
+    width: 20px;
+    height: 20px;
+}
+.sheshi_wifi {
+	background: url(../images/hotel-detail-icon7.png) no-repeat -110px -70px;
+}
+.sheshi_p {
+    background: url(../images/hotel-detail-icon7.png) no-repeat -130px -70px;
+}
+.sheshi_transfer {
+    background: url(../images/hotel-detail-icon7.png) no-repeat -150px -70px;
+}
+.sheshi_lift {
+	background: url(../images/hotel-detail-icon7.png) no-repeat  -170px -70px;
+}
+.sheshi_restaurant {
+    background: url(../images/hotel-detail-icon7.png) no-repeat  -190px -70px;
+}
+.sheshi_luggage {
+    background: url(../images/hotel-detail-icon7.png) no-repeat  -210px -70px;
+}
+.sheshi_kettle {
+	background: url(../images/hotel-detail-icon7.png) no-repeat  -290px -70px;
+}
+/*酒店条例*/
+
+/*用户评论*/
+.hotel_user_bar {
+	margin-top: 20px;
+}
+.hotel_user_box{
+	padding: 20px 0 20px 0;
+	margin: 0;
+	border-bottom: 1px dashed #ddd;
+}
+.user_touxiang {
+	text-align: center;
+	padding: 5px 0 5px 0;
+}
+.user_name {
+	margin: 2px 0 0 0;
+	font-weight: bold;
+}
+.user_touxiang img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.hotel_user_con {
+	padding: 5px 0 5px 0;
+	min-height: 51px;
+	font-size: 14px;
+	text-align: justify;
+	line-height: 22px;
+}
+.btn_pinlun_bar {
+	text-align: right;
+	margin-top: 5px;
+	disp lay: none;
+}
+.user_pinlun{
+	width: 100%;
+	height: 50px;
+	resize:none;
+}
+.user_pinlun_btn{
+	width: 4%;
+	height: 25px;
+}
+.hotel_user_zan,.hotel_user_pinlun,.hotel_user_time {
+	font-size: 14px;
+}
+.hotel_counts {
+	padding: 5px 5px 5px 0;
+	text-align: right;
+}
+.hotel_user_pinlun_num,.hotel_user_time_num {
+	margin-right: 10px;
+}
+
+/*点评*/
+.commen_upload_up,.comment_user_pinjia,.comment_lv_s{
+	text-align: justify;
+	letter-spacing: 5px;
+}
+
+.comment_box{
+	position: fixed;
+	top: 0;
+	left: -100%; 
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background: rgba(0,0,0,0.9);
+}
+.comment_bar{
+	position: absolute;
+	top: -100%;
+	left: 0; 
+	right: 0;
+	z-index: 3;
+	background: white;
+	width: 62%;
+	min-height: 500px;
+	margin: auto;
+	border-radius: 4px;
+}
+.comment_headinig{
+	border-bottom: 1px solid #ddd;
+}
+.comment_title{
+	padding-left: 15px;
+}
+.comment_body{
+	padding:10px 15px 0px 15px ;
+}
+.comment_lv_bar,.comment_user_con,.commen_upload_img{
+	padding: 8px 15px 8px 15px ;
+}
+.comment_lv {
+	display: inline-block;
+    width: 19px;
+    height: 19px;
+    background: url(../images/hotel-detail-icon7.png) no-repeat -175px -109px;
+}
+.comment_lvB {
+    background: url(../images/hotel-detail-icon7.png) no-repeat -70px -109px;
+}
+.comment_mark{
+	display: inline-block;
+	float: right;
+}
+#con_mark{
+	font-style: normal;
+	font-size: 18px;
+	font-weight: bold;
+	padding-right: 5px;
+	color: #F18F00;
+}
+
+
+#user_pinlun{
+	width: 100%;
+	height: 100px;
+	padding:5px;
+	text-align: justify;
+	resize:none;
+	letter-spacing: 2px;
+	background: #efefef;
+	border:none;
+}
+.user_pinlun_fanWei{
+	color: #aaa;
+}
+.user_pinlun_fanWei_red{
+	color: red;
+}
+/*
+.img_box{
+	position: relative;
+}*/
+.upload_img_bar{
+	margin-left: 5px;
+	margin-top: 5px;
+	float: left;
+	width: 120px;
+	height: 120px;
+	line-height: 100px;
+	font-size: 100px;
+	text-align: center;
+	background: #efefef;
+	color: rgba(0,0,0,.3);
+	cursor: pointer;
+	transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+}
+.upload_img_bar:hover{
+	background: #ffa800;
+	color: white;
+}
+#upload_{
+	display: none;
+}
+.img_box{
+	width: 120px;
+	height: 130px;
+	position: relative;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+#showImg .rmoveThisImg {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right:0px;
+	width: 20px;
+	height: 20px;
+	font-size: 15px;
+	color: #000;
+	text-align: center;
+	line-height: 20px;
+	background: #fff;
+	opacity: 0;
+	cursor: pointer;
+	transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+}
+#showImg .img_box:hover .rmoveThisImg{
+	opacity: 1;
+}
+#showImg .rmoveThisImg:hover{
+	color: #F18F00;
+}
+.comment_sub_box{
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+#comment_sub{
+	display: inline-block;
+	margin-left: 19%;
+	width: 125px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    background: #ffa800;
+    transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+}
+#comment_sub:hover {
+	background:#F18F00; 
+}
+/**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*轮播tu*/
+#box{
+	width: 100%;
+	height: 420px;
+	overflow: hidden;
+	border-radius: 4px;
+	position: relative;
+}
+#box .img-warp{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#box .img-warp li{
+	height: 420px;
+	width: 750px;
+	float: left;
+}
+#box .img-warp li img{
+}
+#box #index-warp{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	background: rgba(0,0,0,.7);
+}
+#index-warp a{
+	width: 100px;
+	height: 80px;
+	margin-left:8px;
+	border-radius: 4px;
+	border:2px solid rgba(0,0,0,0);
+	display: inline-block;
+	overflow: hidden;
+	transition: .5s;
+	-o-transition: .5s;
+	-ms-transition: .5s;
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+}
+#index-warp a .img{
+	border-radius: 4px;
+	transition: .3s;
+	-o-transition: .3s;
+	-ms-transition: .3s;
+	-moz-transition: .3s;
+	-webkit-transition: .3s;
+}
+#index-warp a:hover .img{
+	transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+#index-warp a:hover{
+	border:2px solid white;
+}
+#index-warp a.active{
+	border:2px solid white;
+}
+
+/*箭头*/
+.left,.right{
+	width: 50px;
+	height:80px;
+	background: rgba(0,0,0,0.7);
+	float: left;
+	top: 50%;
+	margin-top:-40px; 
+	text-align: center;
+	position: absolute;
+	cursor: pointer;
+	display: none;
+}
+.right{
+	right: 0;
+}
+.init{
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	border: 2px solid #ccc;
+	transform-origin: 0 0;		/*50%是X 100%反过来*/
+	transition: 0.5s;
+}
+.left_up{
+	transform: translateX(-35%) rotate(45deg);
+}
+.left_dn{
+	transform: translateX(-35%) rotate(-45deg);
+}
+.right_up{
+	transform: translateX(35%) rotate(-135deg);
+}
+.right_dn{
+	transform: translateX(35%) rotate(135deg);
+}
+.left:hover .left_up{
+	transform:translateX(-35%)rotate(30deg);
+	border-color:white ;
+}
+.left:hover .left_dn{
+	transform:translateX(-35%) rotate(-30deg);
+	border-color:white ;
+}
+.right:hover .right_up{
+	transform:translateX(35%)rotate(-150deg);
+	border-color:white ;
+}
+.right:hover .right_dn{
+	transform:translateX(35%) rotate(150deg);
+	border-color:white ;
+}
+
+
+

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Travel_Hotel</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="travel" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1"/>
+	<link rel="shortcut icon" href="images/favicon.ico.png" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" media="all"/>
+	<link rel="stylesheet" type="text/css" href="css/banner.css" />
+	<link rel="stylesheet" href="css/hotel.css">
+	<style type="text/css" media="screen">
+	</style>
+</head>
+<body>
+<div class="body-warp">
+	<section class="section_logo">
+		<nav class="navbar" role="navigation">
+			<div class="container container_nav">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed btn_logo" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand logo" href="#" sytle="float:left">
+						<img src="images/logo.png"  alt="travel"/>
+					</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav  navbar-left nav-logo">
+						<a href="index.html">
+							<i class="nav-logo_i"></i>
+							<span class="glyphicon glyphicon-home"></span>
+							首页
+						</a>
+						<a href="#"  class="active_zch">
+							<i class="nav-logo_i"></i>
+							<span class="glyphicon glyphicon-stats"></span>
+							酒店
+						</a>
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right ul_Logins">
+						<li><a href="javascript:;" id="reg"><i class="glyphicon glyphicon-pencil user_pho"></i><i class="nav-logo_i"></i>注册</a></li>
+						<li><a href="javascript:;" id="login"><i class="glyphicon glyphicon-user user_pho" id="user_photo"></i><i class="nav-logo_i"></i><span id="user_name">登陆</span></a></li>
+					</ul>
+					<form action="" class="navbar-form navbar-right navbar-search">
+						<div class="btn-group">
+							<input type="text" class="form-control form-control_search" name="" id="" value="" />
+							<button class="btn btn_search"><span class="glyphicon glyphicon-search"></span></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</section>
+	<section class="section_content">
+		<div class="container">
+			<div class="panel panel-box">
+				<div class="panel panel-heading panel-bar">
+					<h2 class="panel-title">温州大酒店</h2>
+					<div class="panel-title-en-bar">
+						<span class="panel-title-en">wen zhou hotel</span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+						<span class="glyphicon glyphicon-star"></span>
+					</div>
+					<div class="hotel_address_bar">
+						<span class="glyphicon glyphicon-map-marker hotel_address_tip" title="九寨沟"></span>
+						<span class="hotel_address">九寨沟</span>
+					</div>
+					<div class="pinFen_bar">
+						<p class="mark_bar"><span class="marks">9</span>分</p>
+						<p title="评分来自" class="marks_bar"><span class="glyphicon glyphicon-flag marks-form"></span>Travel.com</p>
+					</div>
+				</div>
+				<div class="panel panel-body panel-body-bar">
+					<div class="row">
+						<div class="col-md-8 col-sm-8">
+							<!-- 轮播图 -->
+							<div id="box">
+								<ul class="img-warp">
+									<li><img src="images/hotel/1.jpeg"></li>
+									<li><img src="images/hotel/1.jpeg"></li>
+									<li><img src="images/hotel/1.jpeg"></li>
+									<li><img src="images/hotel/1.jpeg"></li>
+									<li><img src="images/hotel/1.jpeg"></li>
+									<li><img src="images/hotel/1.jpeg"></li>
+								</ul>
+								<div class="left">
+									<i class="init left_up"></i>
+									<i class="init left_dn"></i>
+								</div>
+								<div class="right">
+									<i class="init right_up"></i>
+									<i class="init right_dn"></i>
+								</div>
+								<div id="index-warp"></div>
+							</div>
+							<!-- 轮播图 -->
+						</div>
+						<div class="col-md-4 col-sm-4 hotel_box">
+							<div class="hotel_info">
+								酒店（又称为宾馆、旅馆、旅店、旅社、商旅、客店、客栈，台湾作饭店，港澳、马来西亚、新加坡等作酒店）其基本定义是提供安全、舒适，令利用者得到短期的休息或睡眠的空间的商业机构。一般地说来就是给宾客提供歇宿和饮食的场所。具体地说饭店是以它的建筑物为凭证，通过出售客房、餐饮及综合服务设施向客人提供服务，从而获得经济收益的组织。酒店主要为游客提供住宿服务、亦生活的服务及设施（寝前服务）、餐饮、游戏、娱乐、购物、商务中心、宴会及会议等设施。
+							</div>
+							<div class="hotel_intruct">
+								<div class="row">
+									<a href="javascript:maoAnimate('jd')" class="jd_hotels col-md-6 hotel_a">
+										<img src="images/hotel/2.jpeg" alt="">
+										<i class="jd_hotels_num">23<span class="jd">经典</span></i>
+									</a>
+									<a href="javascript:maoAnimate('jds')" class="jds_hotels col-md-6 hotel_a">
+										<img src="images/hotel/2.jpeg" alt="">
+										<i class="jd_hotels_num">23<span class="jd">套房</span></i>
+									</a>
+									<a href="javascript:maoAnimate('jda')" class="jda_hotels col-md-6 hotel_a">
+										<img src="images/hotel/2.jpeg" alt="">
+										<i class="jd_hotels_num">23<span class="jd">景房</span></i>
+									</a>
+									<a  href="javascript:maoAnimate('jdv')" class="jdv_hotels col-md-6 hotel_a">
+										<img src="images/hotel/2.jpeg" alt="">
+										<i class="jd_hotels_num">23<span class="jd">池景房</span></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row link_bar">
+						<div class="col-md-6">
+							<a href="javascript:maoAnimate('hotel_intruct')" class="link_a hotel_a">详情</a>
+							<a href="javascript:maoAnimate('hotel_comment')" class="link_a hotel_a">评论</a>
+						</div>
+						<div class="col-md-6 link_counts">
+							<a href="javascript:;" class="link_a_pinlun" ><i class="link_a_pinlun_ico"></i>点评</a>
+							<a href="" class="link_a_zan" ><i class="glyphicon glyphicon-thumbs-up link_a_zan_ico"></i>点赞</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<div class="hotel_alls_title">
+						<h4><span class="glyphicon glyphicon-list hotel_icon"></span>客房类型</h4>
+					</div>
+					<table class="table table-bordered">
+						<thead>
+							<tr class="active">
+								<th>房间类型</th>
+								<th>人数上限</th>
+								<th>相关政策</th>
+								<th>价格</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="" id="jd">
+								<td>
+									<div class="jd_hotels_name_bar">
+										<i class="glyphicon glyphicon-home jd_hotels_name_ico"></i>
+										<span class="jd_hotels_name">经典客房</span>
+									</div>
+									<div class="jd_hotels_img_bar">
+										<img src="images/hotel/jd_s.jpg" alt="">
+									</div>
+								</td>
+								<td>
+									<div class="jd_hotels_zhuke_bar">
+										<span><i class="jd_hotels_zhuke"></i>2住客</span>
+									</div>
+								</td>
+								<td>
+									<ol type="1" class="jd_hotels_zhence_ol">
+										<li>不含早</li>
+										<li class="imp">不可退订</li>
+										<li>预先支付</li>
+										<li>已含税</li>
+									</ol>
+								</td>
+								<td>
+									<p class="jd_hotels_money_bar">￥<span class="jd_hotels_money">688</span></p>
+								</td>
+							</tr>
+							<tr class="" id="jds">
+								<td>
+									<div class="jd_hotels_name_bar">
+										<i class="glyphicon glyphicon-home jd_hotels_name_ico"></i>
+										<span class="jd_hotels_name">经典套房</span>
+									</div>
+									<div class="jd_hotels_img_bar">
+										<img src="images/hotel/jd_s.jpg" alt="">
+									</div>
+								</td>
+								<td>
+									<div class="jd_hotels_zhuke_bar">
+										<span><i class="jd_hotels_zhukes"></i>4住客</span>
+									</div>
+								</td>
+								<td>
+									<ol type="1" class="jd_hotels_zhence_ol">
+										<li>不含早</li>
+										<li class="imp">不可退订</li>
+										<li>预先支付</li>
+										<li>已含税</li>
+									</ol>
+								</td>
+								<td>
+									<p class="jd_hotels_money_bar">￥<span class="jd_hotels_money">688</span></p>
+								</td>
+							</tr>
+							<tr class="" id="jda">
+								<td>
+									<div class="jd_hotels_name_bar">
+										<i class="glyphicon glyphicon-home jd_hotels_name_ico"></i>
+										<span class="jd_hotels_name">经典景房</span>
+									</div>
+									<div class="jd_hotels_img_bar">
+										<img src="images/hotel/jd_s.jpg" alt="">
+									</div>
+								</td>
+								<td>
+									<div class="jd_hotels_zhuke_bar">
+										<span><i class="jd_hotels_zhuke"></i>2住客</span>
+									</div>
+								</td>
+								<td>
+									<ol type="1" class="jd_hotels_zhence_ol">
+										<li>不含早</li>
+										<li class="imp">不可退订</li>
+										<li>预先支付</li>
+										<li>已含税</li>
+									</ol>
+								</td>
+								<td>
+									<p class="jd_hotels_money_bar">￥<span class="jd_hotels_money">688</span></p>
+								</td>
+							</tr>
+							<tr class="" id="jdv">
+								<td>
+									<div class="jd_hotels_name_bar">
+										<i class="glyphicon glyphicon-home jd_hotels_name_ico"></i>
+										<span class="jd_hotels_name">经典景房+泳池</span>
+									</div>
+									<div class="jd_hotels_img_bar">
+										<img src="images/hotel/jd_s.jpg" alt="">
+									</div>
+								</td>
+								<td>
+									<div class="jd_hotels_zhuke_bar">
+										<span><i class="jd_hotels_zhuke"></i>2住客</span>
+									</div>
+								</td>
+								<td>
+									<ol type="1" class="jd_hotels_zhence_ol">
+										<li>不含早</li>
+										<li class="imp">不可退订</li>
+										<li>预先支付</li>
+										<li>已含税</li>
+									</ol>
+								</td>
+								<td>
+									<p class="jd_hotels_money_bar">￥<span class="jd_hotels_money">688</span></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<!-- 酒店条例 -->
+				<div class="panel-body"  id="hotel_intruct">
+					<div class="hotel_alls_title">
+						<h4><span class="glyphicon glyphicon-list hotel_icon"></span>酒店条例</h4>
+					</div>
+					<ul class="row hotel_alls_ul">
+						<li class="row col-md-12 col-sm-12 col-xs-12 hotel_alls_li">
+							<dt class="col-md-3 col-sm-3 col-xs-3">基本信息</dt>
+							<i class="col-md-3 col-sm-3 col-xs-3">最早入住时间<span class="hotel_time_s">16:00</span></i>
+							<i class="col-md-5 col-sm-5 col-xs-5">最晚离开时间<span class="hotel_time_e">23:00</span></i>
+						</li>
+						<li class="row col-md-12 col-sm-12 col-xs-12 hotel_alls_li">
+							<dt class="col-md-3 col-sm-3 col-xs-3">出示提示</dt>
+							<i class="col-md-9 col-sm-9 col-xs-9">17 岁及以下的儿童如果与父母或监护人同住一房并使用现有床铺，可免费入住。</i>
+						</li>
+						<li class="row col-md-12 col-sm-12 col-xs-12 hotel_alls_li">
+							<dt class="col-md-3 col-sm-3 col-xs-3">费用和押金</dt>
+							<i class="col-md-9 col-sm-9 col-xs-9">
+								<ul>
+                                    <li>即点即煮早餐收费：每人大约 USD 7</li>
+                                    <li>折叠床使用费：每晚 USD 15</li>
+                                    <li>折叠床使用费：每晚 USD 15</li>
+                                </ul>
+							</i>
+						</li>
+						<li class="row col-md-12 col-sm-12 col-xs-12 hotel_alls_li">
+							<dt class="col-md-3 col-sm-3 col-xs-3">强制性收费</dt>
+							<i class="col-md-9 col-sm-9 col-xs-9">
+                                <ul>
+                                    <li>度假费：每间住宿每晚 USD15</li>
+                                    <li>使用健身俱乐部</li>
+                                    <li>使用健身中心</li>
+                                    <li>接驳班车服务</li>
+                                    <li>报纸</li>
+                                    <li>客房内咖啡</li>
+                                    <li>洗衣设施</li>
+                                    <li>这里已包括酒店所提供的全部收费。但是，收费可能会因不同情况而有所变化，例如，不同住宿天数或客房类型则收费也不同。</li>
+                                </ul>
+                            </i>
+						</li>
+						<li class="row col-md-12 col-sm-12 col-xs-12 hotel_alls_li">
+							<dt class="col-md-3 col-sm-3 col-xs-3">主要设施</dt>
+							<i class="col-md-9 col-sm-9 col-xs-9">
+                                <ul class="hotel_alls_ul_sheshi">
+                                    <li><i class="sheshi_wifi"></i>免费wifi</li>
+                                    <li><i class="sheshi_p"></i>免费停车场</li>
+                                    <li><i class="sheshi_transfer"></i>接送机</li>
+                                    <li><i class="sheshi_lift"></i>电梯</li>
+                                    <li><i class="sheshi_restaurant"></i>餐厅</li>
+                                    <li><i class="sheshi_luggage"></i>行李寄存</li>
+                                    <li><i class="sheshi_kettle"></i>热水壶</li>
+                                </ul>
+                            </i>
+						</li>
+					</ul>
+				</div>
+				<div class="panel-body" id="hotel_comment">
+					<div class="hotel_alls_title">
+						<h4><span class="glyphicon glyphicon-list hotel_icon"></span>用户评论</h4>
+					</div>
+                    <div class="row hotel_user_bar">
+                        <div class="col-md-12">
+                            <div class="row hotel_user_box">
+                                <div class="col-md-2 user_touxiang">
+                                    <img src="images/user.jpg">
+                                    <p class="user_name">AEO</p>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="hotel_user_con">
+                                       这是进入Celebration区路过的私人住宅区，这是下午4点多，一家四口带着狗狗在小区漫步，不仅感叹人家的生活怎么就那么悠哉呢，移民的想法立马各种涌出。。。我们向男主人打听酒店的名字，还好人家特别熟悉并很热情的告诉我们怎么走，避免了初来乍到的很多冤枉路。原来我们住的酒店，是属于Celebration区的，这个社区有私家别墅，花园，医院，Publix超市，我们的酒店就是这个社区的配套酒店。大约下午5点，终于到了我们这次旅行的第一落脚点，Melia Orlando Suite Hotel Celebration。 顺利办完check in，来到我们的房间（号），一进门被眼前的家庭大套房惊住，这就是所谓的king room吧（图），双卧双卫，一间开放式厨房外加大客厅，阳台外摆着两把小红椅子，很应景，下面就是中心泳池，正当下午阳光充足，净是bikini的大美妞。
+                                    </div>
+                                    <div class="hotel_counts">
+                                    	<span class="glyphicon glyphicon-time hotel_user_time"></span>
+                                    	<span class="hotel_user_time_num">2016-2018</span>
+                                    	<span class="glyphicon glyphicon-comment hotel_user_pinlun"></span>
+                                    	<span class="hotel_user_pinlun_num">222</span>
+                                    	<span class="glyphicon glyphicon-thumbs-up hotel_user_zan"></span>
+                                    	<span class="hotel_user_zan_num">222</span>
+                                    </div>
+                                    <div class="btn_pinlun_bar">
+                                    	<textarea class="user_pinlun"></textarea>
+                                    	<input type="button"  class="user_pinlun_btn" name="" value="评论" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="col-md-12">
+                            <div class="row hotel_user_box">
+                                <div class="col-md-2 user_touxiang">
+                                    <img src="images/user.jpg">
+                                    <p class="user_name">AEO</p>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="hotel_user_con">
+                                       这是进入Celebration区路过的私人住宅区，这是下午4点多，一家四口带着狗狗在小区漫步，不仅感叹人家的生活怎么就那么悠哉呢，移民的想法立马各种涌出。。。我们向男主人打听酒店的名字，还好人家特别熟悉并很热情的告诉我们怎么走，避免了初来乍到的很多冤枉路。原来我们住的酒店，是属于Celebration区的，这个社区有私家别墅，花园，医院，Publix超市，我们的酒店就是这个社区的配套酒店。大约下午5点，终于到了我们这次旅行的第一落脚点，Melia Orlando Suite Hotel Celebration。 顺利办完check in，来到我们的房间（号），一进门被眼前的家庭大套房惊住，这就是所谓的king room吧（图），双卧双卫，一间开放式厨房外加大客厅，阳台外摆着两把小红椅子，很应景，下面就是中心泳池，正当下午阳光充足，净是bikini的大美妞。
+                                    </div>
+                                    <div class="hotel_counts">
+                                    	<span class="glyphicon glyphicon-time hotel_user_time"></span>
+                                    	<span class="hotel_user_time_num">2016-2018</span>
+                                    	<span class="glyphicon glyphicon-comment hotel_user_pinlun"></span>
+                                    	<span class="hotel_user_pinlun_num">222</span>
+                                    	<span class="glyphicon glyphicon-thumbs-up hotel_user_zan"></span>
+                                    	<span class="hotel_user_zan_num">222</span>
+                                    </div>
+                                    <div class="btn_pinlun_bar">
+                                    	<textarea class="user_pinlun"></textarea>
+                                    	<input type="button"  class="user_pinlun_btn" name="" value="评论" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="col-md-12">
+                            <div class="row hotel_user_box">
+                                <div class="col-md-2 user_touxiang">
+                                    <img src="images/user.jpg">
+                                    <p class="user_name">AEO</p>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="hotel_user_con">
+                                       这是进入Celebration区路过的私人住宅区，这是下午4点多，一家四口带着狗狗在小区漫步，不仅感叹人家的生活怎么就那么悠哉呢，移民的想法立马各种涌出。。。我们向男主人打听酒店的名字，还好人家特别熟悉并很热情的告诉我们怎么走，避免了初来乍到的很多冤枉路。原来我们住的酒店，是属于Celebration区的，这个社区有私家别墅，花园，医院，Publix超市，我们的酒店就是这个社区的配套酒店。大约下午5点，终于到了我们这次旅行的第一落脚点，Melia Orlando Suite Hotel Celebration。 顺利办完check in，来到我们的房间（号），一进门被眼前的家庭大套房惊住，这就是所谓的king room吧（图），双卧双卫，一间开放式厨房外加大客厅，阳台外摆着两把小红椅子，很应景，下面就是中心泳池，正当下午阳光充足，净是bikini的大美妞。
+                                    </div>
+                                    <div class="hotel_counts">
+                                    	<span class="glyphicon glyphicon-time hotel_user_time"></span>
+                                    	<span class="hotel_user_time_num">2016-2018</span>
+                                    	<span class="glyphicon glyphicon-comment hotel_user_pinlun"></span>
+                                    	<span class="hotel_user_pinlun_num">222</span>
+                                    	<span class="glyphicon glyphicon-thumbs-up hotel_user_zan"></span>
+                                    	<span class="hotel_user_zan_num">222</span>
+                                    </div>
+                                    <div class="btn_pinlun_bar">
+                                    	<textarea class="user_pinlun"></textarea>
+                                    	<input type="button"  class="user_pinlun_btn" name="" value="评论" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                       
+                    </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section_footer">
+	<div class="container Version">
+		<div class="row">
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<ul class="footer_nav">
+					<li><dt><a href="">关于我们</a></dt></li>
+					<li><dd><a href="">Travel简介</a></dd></li>
+					<li><dd><a href="">联系我们</a></dd></li>
+					<li><dd><a href="">合作伙伴</a></dd></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<ul class="footer_nav">
+					<li><dt><a href="">加入Travel</a></dt></li>
+					<li><dd><a href="">招聘职位</a></dd></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<ul class="footer_nav">
+					<li><dt><a href="">网站条款</a></dt></li>
+					<li><dd><a href="">会员条款</a></dd></li>
+					<li><dd><a href="">社区指南</a></dd></li>
+					<li><dd><a href="">版权声明</a></dd></li>
+					<li><dd><a href="">免责声明</a></dd></li>
+				</ul>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6">
+				<ul class="footer_nav">
+					<li><dt><a href="">帮助中心</a></dt></li>
+					<li><dd><a href="">新手上路</a></dd></li>
+					<li><dd><a href="">使用帮助</a></dd></li>
+					<li><dd><a href="">网站地图</a></dd></li>
+					<li><dd><a href="">旅行工具</a></dd></li>
+					<li><dd><a href="">生活服务</a></dd></li>
+				</ul>
+			</div>
+		</div>
+		<div class="banquan">
+			2016-2018 &copy; Travel ® All rights reserved. Version v5.57
+			Design & Development 张程洪 & 陈远航<br>
+			京ICP备1455134号  京公网安备11010102004518  京ICP证140673号<br>
+			技术支持<a href="http://www.hyycinfo.com" id="tech">衡阳市源辰信息科技有限公司</a> TEL:0734-8355998<br>
+			Travel网为旅行者提供原创实用的出境游旅行指南和旅游攻略、旅行社区和问答交流平台，并提供签证、保险、机票、酒店预订、租车等服务。
+		</div>
+	</div>
+</section>
+</div>
+<div class="login_bar">
+	<div class="login_con_bar">
+		<a href="javascript:;" class="close_btn" >
+			<i></i>
+		</a>
+		<a href="" class="up_photo_bar" title="上传头像">
+			<div class="up_photo">
+				<img src="images/camera.png" alt="">
+			</div>
+		</a>
+		<div class="user_login_bar">
+		    <form class="form-signin" role="form">
+			    <div class="btn-group">
+			    		<i class="iA email"></i>
+			    		<input type="email" class="form-control e" placeholder="请填写邮箱或用户名" required autofocus>
+			    		<i class="iA pwd"></i>
+			       		<input type="password" class="form-control p" placeholder="请填写密码" required>
+			    </div>
+		        <div class="checkbox">
+					<label>
+						<input type ="checkbox" value="remember-me">7天之内免登录
+					</label>
+		        </div>
+				<button class="btn btn-lg btn-warning btn-block" id="login_btn" type="submit">登录</button>
+				<div class="login_info">
+					<a href="#" id="Forgot" title="忘记密码？">忘记密码?</a>
+					<a href="#" id="SgUp" title="注册新账号">还未注册？立刻加入</a>
+				</div>
+		    </form>
+		</div>
+	</div>
+</div>
+	 <!-- 遮罩  -->
+	<div class="zhegai">
+	</div>
+	
+
+<div class="comment_box">
+	<div class="comment_bar">
+		<div class="comment_headinig">
+			<h2 class="comment_title">温州大酒店</h2>
+		</div>
+		<div class="comment_body">
+			<div class="row comment_lv_bar">
+				<span class="col-md-2 comment_lv_s">星级:</span>
+				<div class="col-md-10 comment_lvbox">
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<i class="comment_lv"></i>
+					<span class="comment_mark"><i id="con_mark">0</i>分</span>
+				</div>
+			</div>
+		</div>
+		<div class="comment_body">
+			<div class="row comment_user_con">
+				<span class="col-md-2 comment_user_pinjia">评论:</span>
+				<div class="col-md-10 comment_pinlun">
+					<div class="comment_pinlun_bar">
+						<textarea name="user_pinlun" id="user_pinlun" placeholder="详细，客观，真实，130字以上为佳！上传图片更有趣哦！"></textarea>
+						<span class="user_pinlun_fanWei">15-500个字，已输入<b class="user_pinlun_num">0</b>个字</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="comment_body">
+			<div class="row commen_upload_img">
+				<span class="col-md-2 commen_upload_up">上传照片:</span>
+				<div class="col-md-10 commen_upload_img_box">
+					<div class="commen_upload_img_bar">
+						<label class="upload_img_bar">+
+						<input id="upload_" type="file" multiple onchange="setImagePreviews(this, 'showImg')">
+						</label>
+					</div>
+					<div id="showImg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="comment_body comment_sub_box">
+		<a href="" id="comment_sub">提交点评</a>
+		</div>
+		<a href="javascript:;" class="close_btn" id="close_comment_btn">
+			<i></i>
+		</a>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/banner.js"></script>
+<script type="text/javascript">
+$(function(){
+	//克隆第一个
+	var liClone = $(".img-warp li").first().clone();
+	$(".img-warp").append(liClone);
+	//li的个数
+	var liLength = $(".img-warp li").length;
+	//li的宽度
+	var liWidth = $(".img-warp li").eq(0).width();
+	var size = liWidth*liLength;
+	var index = 0;
+	//小圆点
+	for (var i = 0; i <liLength-1; i++) {
+		var a = $("<a href='javascript:;'><img class='img' src='images/hotel/1.jpeg' alt=''></a>");
+		$("#index-warp").append(a);
+	};
+	//设置默认第一个样式  居中显示
+	var warpWidth = $("#index-warp").width();
+	// $("#index-warp").css({"margin-left": -warpWidth/2}); 
+	$("#index-warp a").eq(0).addClass('active')
+
+	//左右按钮淡入淡出
+	$(".img-warp").css({width: size});
+	//小圆点控制滑动效果
+	$("#index-warp a").click(function() {
+		var i=$(this).index();
+		index=i;
+		$(".img-warp").stop().animate({left:-i*liWidth})
+		$(this).addClass('active').siblings().removeClass('active');
+	});
+	//移入移出
+	$("#box").hover(function() {
+		clearInterval(timer);
+		$(".left,.right").stop().fadeIn(500);
+	}, function() {
+		$(".left,.right").stop().fadeOut(500);
+		timer=setInterval(function(){
+			index++;	
+			move();
+		},4000)
+	});
+
+	//左右按钮点击
+	$(".left").click(function(){
+		index--;	
+		move();	
+	})
+	$(".right").click(function(){
+		index++;
+		move();
+	})
+	//核心动画
+	function move(){
+		//当到最后一张的时候
+		if (index == liLength) {
+			$(".img-warp").css({left: '0'});
+			index=1;
+		}
+		//当到第一张的时候
+		if(index < 0){
+			$(".img-warp").css({left:-liWidth*(liLength-1)});	//倒数第二张的位置
+			index=liLength-2;		//倒数第二张
+		}
+		$(".img-warp").stop().animate({left:-(liWidth*index)},500)
+		if(index == liLength-1){
+			$("#index-warp a").eq(0).addClass('active').siblings().removeClass("active");
+		}else{
+			$("#index-warp a").eq(index).addClass('active').siblings().removeClass("active");
+		}
+	}
+	// 定时器
+	var timer=setInterval(function(){
+		index++;	
+		move();
+	},4000)
+
+	// 评价动画
+	$("#user_pinlun").on("focus", function() {
+		$(this).animate({
+			"background-color":"#fff",
+			"outline-color":"#F18F00"
+		},400);
+	});
+	$("#user_pinlun").on("blur", function() {
+		$(this).animate({
+			"background-color":"#efefef",
+			"outline-color":"none"
+		},400);
+	});
+	var old = $(".user_pinlun_fanWei").html();
+	$("#user_pinlun").keyup(function(event) {
+		var plLength = $(this).val().length;
+		if (plLength > 0 && plLength < 15) {
+			$(".user_pinlun_fanWei").html("还需要输入"+(15-plLength)+"个字").addClass('user_pinlun_fanWei_red');
+		}else{
+			$(".user_pinlun_fanWei").html(old).removeClass('user_pinlun_fanWei_red');
+			$(".user_pinlun_num").text(plLength);
+		};
+	});
+	// 点评动画
+	$(".link_a_pinlun").click(function(){
+		$(".comment_box").animate({"left":"0"},500);
+		$(".comment_bar").delay(500).animate({"top":"85px"},500);
+	});
+	$("#close_comment_btn").click(function(){
+		$(".comment_box").css({"overflow":"hidden"});
+		$(".comment_box").delay(500).animate({"left":"100%"},500,function(){
+			$(".comment_box").css({
+				"left":"-100%",
+				"overflow":"auto"
+			});
+			$(".comment_bar").css({
+				"top":"-100%"
+			});
+		});
+		$(".comment_bar").animate({"top":"100%"},500);
+	});
+	// 星级评分
+	$.each($(".comment_lv"), function(index, item) {
+		$(item).hover(function(event) {
+			$(".comment_lv").removeClass("comment_lvB");
+			for (var i = 0; i <= index; i++ ) {
+				$("#con_mark").text(i+1);
+				$(".comment_lv").eq(i).addClass("comment_lvB");
+			}
+		});
+	});
+	
+});
+
+
+
+function setImagePreviews(imagesObj,divid) {
+    var dd = document.getElementById(divid);
+    dd.style.display="block";
+    dd.innerHTML = "";
+    var fileList = imagesObj.files;
+    for (var i = 0; i < fileList.length; i++) {            
+    	dd.innerHTML += "<div class='img_box' style='float:left'><img id='"+divid+"_img" + i + "'  /> <i class='glyphicon glyphicon-trash rmoveThisImg' onclick='rmoveThisImgs(this)'></i></div>";
+        var imgObjPreview = document.getElementById(divid+"_img"+i); 
+        if (imagesObj.files && imagesObj.files[i]) {
+            //火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '120px';
+            imgObjPreview.style.height = '120px';
+            imgObjPreview.src = window.URL.createObjectURL(imagesObj.files[i]);
+        }else {
+            //IE下，使用滤镜
+            imagesObj.select();
+            var imgSrc = document.selection.createRange().text; //运用IE滤镜获取数据;
+            //alert(imgSrc);
+            var localImagId = document.getElementById("img" + i);
+            //必须设置初始大小
+            localImagId.style.width = "200px";
+            localImagId.style.height = "200px";
+            //图片异常的捕捉
+            try {
+                localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader( true,sizingMethod=scale,src = imgSrc)";  //scale：缩放图片以适应对象的尺寸边界。
+            }
+            catch (e) {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty(); //在当前网页下不能选择对象,也就是鼠标不能选中 
+        }
+    }  
+    return true;
+}
+// function rmoveThisImgs(a){
+// 	$(a).parent().remove();
+// }
+// function showR(index){
+// 	var indexs = $(index).index();
+// 	$(".rmoveThisImg").eq(indexs).css('display', 'block');
+// };
+// function unshowR(index){
+// 	var indexs = $(index).index();
+// 	$(".rmoveThisImg").eq(indexs).css('display', 'none');
+// };
+</script>
+</html>

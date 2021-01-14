@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			.menu{
+				border: solid 1px black;
+				width: 240px;
+				height: 500px;
+				text-align: center;
+				overflow: hidden;
+			}
+			
+			.menu h3{
+				line-height: 1.5em;
+				margin: 0;
+				margin: 1px 0px;
+				background-color: gray;
+			}
+			
+			.menu ul{
+				margin: 0px;
+				padding: 0;
+			}
+			.menu ul li{
+				line-height: 2em;
+				
+			}
+			.menu ul li:hover{
+				background-color: gainsboro;
+			}
+			
+			.menu ul li a{
+				color: #000000;
+				text-decoration: none;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="menu">
+			<h3>用户</h3>
+			<ul>
+				<li><a href="#">增加用户</a></li>
+				<li><a href="#">删除用户</a></li>
+				<li><a href="#">用户列表</a></li>
+				<li><a href="#">等级管理</a></li>
+				<li><a href="#">权限管理 </a></li>
+			</ul>
+			<h3>文章</h3>
+			<ul>
+				<li><a href="#">文章列表</a></li>
+				<li><a href="#">新建文章</a></li>
+				<li><a href="#">垃圾桶</a></li>
+				<li><a href="#">分类</a></li>
+				<li><a href="#">标签 </a></li>
+			</ul>
+			
+			<h3>系统管理</h3>
+			<ul>
+				<li><a href="#">超级管理员</a></li>
+				<li><a href="#">清空缓存</a></li>
+				<li><a href="#">关闭网站</a></li>
+				<li><a href="#">基本设置</a></li>
+				<li><a href="#">标签 </a></li>
+			</ul>
+			<h3>系统管理</h3>
+			<ul>
+				<li><a href="#">超级管理员</a></li>
+				<li><a href="#">清空缓存</a></li>
+				<li><a href="#">关闭网站</a></li>
+				<li><a href="#">基本设置</a></li>
+				<li><a href="#">标签 </a></li>
+			</ul>
+			<h3>系统管理</h3>
+			<ul>
+				<li><a href="#">超级管理员</a></li>
+				<li><a href="#">清空缓存</a></li>
+				<li><a href="#">关闭网站</a></li>
+				<li><a href="#">基本设置</a></li>
+				<li><a href="#">标签 </a></li>
+			</ul>
+			<h3>系统管理</h3>
+			<ul>
+				<li><a href="#">超级管理员</a></li>
+				<li><a href="#">清空缓存</a></li>
+				<li><a href="#">关闭网站</a></li>
+				<li><a href="#">基本设置</a></li>
+				<li><a href="#">标签 </a></li>
+			</ul>
+			
+		</div>
+
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>		
+		<script type="text/javascript">
+			
+			$(".menu h3").click(function(){
+				$(this).next().slideToggle(200);
+			});
+			
+		</script>
+	</body>
+</html>

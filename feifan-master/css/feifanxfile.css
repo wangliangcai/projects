@@ -1,0 +1,516 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	margin: 0px;
+	font-size: 12px;
+	font-family: "arial, helvetica, sans-serif";
+	background-color: #fff;
+}
+a{
+	color: #333;
+	text-decoration: none;
+}
+label {
+	vertical-align: middle;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.w{
+	width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*顶部的导航条*/
+.nav{
+	height: 40px;
+	line-height: 40px
+	background-color: #333333;
+}
+.nav ul{
+	height: 0px;
+	padding: 0px;
+}
+.nav ul li{
+	height: 40px;
+	list-style: none;
+	float: left;
+	padding: 0 1em;
+}
+.nav ul li a{
+	color: #b0b0b0;
+}
+
+.nav li .login a{
+	color: #FFFFFF;
+}
+.nav li .register a{
+	color: #E60012;
+}
+
+.nav li .shopping-cart{
+	position: relative;
+}
+.nav span .icon-shopping-cart{
+	display: block;
+	width: 28px;
+	height: 26px;
+	background-image: url(img/shoppingCart.png);
+	position: relative;
+	top: 7px;
+}
+
+.nav li .shopping-cart:hover .goods-list{
+	display: block;
+}
+/*gouwuche  c车*/
+.nav .goods-list{
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	background-color: #e5e5e5;
+	display: none;
+	z-index: 9999;
+	/*z-index属性来表示z轴的区别。表示一个元素在叠加顺序上的上下立体关系。*/
+}
+.nav .goods-list table{
+	width: 214px;
+	line-height: 22px;
+	text-align: center;
+	color: #B0B0B0;
+}
+.nav .goods-list table tr:first-child:hover{
+	color: #b0b0b0;
+	background-color: #e5e5e5;
+}
+.nav .goods-list table tr:hover{
+	color: #e5e5e5;
+	background-color: #b0b0b0;
+}
+.nav .goods-list .pari{
+	color: #e60012;
+}
+.nav ul li:hover{
+	background-color: #b0b0b0;
+}
+.nav ul li:hover a{
+	color: #333;
+}
+/* header部分*/
+.header{
+	height: 104px;
+	padding: 20px 0px;
+	background-color: yellow;
+	box-sizing: border-box;
+}
+.header .logo{
+	height: 64px;
+	width: 196px;
+}
+.header .logo img{
+	width: inherit;
+	height: inherit;
+}
+/*.header .search{
+	width: 548;
+	margin-left: 84px;
+}*/
+.header .search{
+	float: left;
+	width: 548px;
+	height: 64px;
+	line-height: 64px;
+	border: solid #b0b0b0 1px;
+	outline: none;
+	font-size: 22px;
+	padding:  0px 0.5em;
+	background-image: url(img/search.png);
+	background-repeat: no-repeat;
+	background-position: 496px 16px;
+}
+
+.header .search:focus{
+	background-image: url(../img/search_red.png);
+	border-color: #E60012;
+}
+
+
+.header .ads-box{
+	width: 200px;
+	height: 64px;
+}
+
+.header .ads-box img{
+	width: inherit;
+	height: inherit;
+}
+
+
+/*  fast  */
+
+.fast{
+	height: 450px;
+	background-color: red;
+	padding-bottom: 40px;
+}
+
+.fast .aside-left{
+	width: 890px;
+	height: inherit;
+	/*background-color: green;*/
+	position: relative;
+}
+.fast .aside-left img{
+	width: inherit;
+	height: inherit;
+}
+.fast .nav-list{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: inherit;
+	width:200px;
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 15px;
+	box-sizing: border-box;
+}
+
+.fast .nav-list ul{
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	line-height: 35px;
+	list-style: none;
+}
+.fast .nav-list ul li{
+	padding: 0px 20px;
+}
+
+.fast .nav-list ul li:hover{
+	background-color: rgba(0,0,0,0.5);
+}
+.fast .nav-list ul a{
+	color: #FFFFFF;
+}
+
+.fast .aside-right{
+	width: 200px;
+	height: inherit;
+	background-color: blue;
+}
+
+
+.fast .news{
+	height:312px;
+	width: 100%;
+	border: solid 1px #B0B0B0;
+	background-color: orange;
+	box-sizing: border-box;
+}
+.fast .news .title{
+	height: 34px;
+	line-height: 34px;
+	padding:0  8px;
+	font-size: 14px;
+	border-bottom: solid 1px #B0B0B0;
+}
+
+.fast .news .title a{
+	color: #333333;
+}
+.fast .news-list{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	font-size: 12px;
+	line-height: 2em;
+}
+.fast .news-list li{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 8px;	
+}
+.fast .news-list li:nth-child(1) a,.fast .news-list li:nth-child(2) a,.fast .news-list li:nth-child(3) a{
+	color: #E60012;
+}
+.fast .news-list li a{
+	color: #B0B0B0;
+}
+.fast .school{
+	margin-top: 10px;
+	height:128px;
+	width: 100%;
+	padding: 6px 8px;
+	box-sizing: border-box;
+	background-color: #5f5750;
+	position: relative;
+}
+.fast .school .item{
+	/* w:(200-16)/3 61 */
+	/* h: (128-12)/2*/
+	width: 61px;
+	height:58px;
+	box-sizing: border-box;
+	/*background-color: red;*/
+	float: left;
+	padding-top: 8px;
+	text-align: center;/**文字 、图片都有效**/
+}
+.fast .school .item img{
+	width: 20px;
+	height: 20px;
+}
+
+.fast .school p{
+	margin: 0px;
+	font-size: 12px;
+	color: #cfcdcb;
+}
+
+.fast .school .liner-right{
+	border-right: solid 1px #6b615a;
+}
+.fast .school .liner-bottom{
+	border-bottom: solid 1px #6b615a;
+}
+.fast .school .liner-cover-1,.fast .school .liner-cover-2{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	background-color: #5f5750;
+	top:56px;
+	left: 60px;
+}
+.fast .school .liner-cover-2{
+	left: 121px;
+}
+/* 新开班 */
+.new-class-bg{
+	padding-top: 30px;
+	padding-bottom: 70px;
+	background-color: #F5F5F5;
+}
+.new-class{
+	height: 250px;
+	/*background-color: greenyellow;*/
+}
+
+.new-class .item{
+	width: 130px;
+	margin-right: 13px;
+	height: inherit;
+	background-color: #FFFFFF;
+	float: left;
+	color: #B0B0B0;
+	text-align: center;
+}
+.new-class .item-hover:hover{
+	box-shadow: 3px 3px 15px 3px gainsboro;
+}
+.new-class .item-hover:hover >div{
+	color: #000;
+}
+.new-class .item-hover:hover >.school-name{
+	background-color: #E60012;
+	color: #fff;
+}
+.new-class .item-hover:hover >.buy-btn{
+	color: #E60012;
+}
+.new-class .item:first-child{
+	width: 112px;
+	margin-right: 0;
+}
+.new-class .item:first-child .school-name{
+	font-size: 16px;
+	text-align: left;
+	color: #000000;
+	font-weight: 600;
+}
+.new-class .item:first-child>div{
+	font-size: 14px;
+	color: #585858;
+	border-color: #fff;
+}
+
+.new-class .item:last-child{
+	margin-right: 0;
+}
+
+
+.new-class .item:last-child >div{
+	border-color: #fff!important;
+}
+.new-class .item > div{
+	box-sizing: border-box;
+	border-bottom: solid 1px #f5f5f5;
+}
+.new-class .school-name{
+	color: #8f8f8f;
+	height: 40px;
+	line-height: 40px;
+	background-color: #F5F5F5;
+	/*background-color: red;*/
+}
+.new-class .class-name{
+	height: 60px;
+	line-height: 60px;
+	/*background-color: blueviolet;*/
+}
+.new-class .class-time{
+	height: 55px;
+	line-height: 55px;
+	
+	/*background-color: yellow;*/
+	
+}
+.new-class .class-price{
+	height: 50px;
+	line-height: 50px;
+	
+	/*background-color: orange;*/
+	
+}
+.new-class .buy-btn{
+	height: 45px;
+	line-height: 45px;
+	/*background-color: green;*/
+	color: #fff;
+	border-bottom:none!important;
+}
+
+.new-class .more{
+	font-size: 16px;
+	color: #585858;
+	display: block;
+	line-height: 1.5em;
+}
+.new-class .hot{
+	display: block;
+	line-height: 1.5em;	
+}
+.new-class .class-price span{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #E60012;
+}
+
+/* 学生作品 */
+.students{
+	height: 310px;
+	padding-bottom: 70px;
+	background-color: #F5F5F5;
+}
+
+.students .title{
+	height: 40px;
+	background-color: red;
+}
+.students .title ul{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	line-height: 40px;
+}
+.students .title ul li{
+	float: left;
+	list-style: none;
+	padding: 0 16px;
+}
+.students .title ul li a{
+	color:#8f8f8f;
+}
+
+.students .title ul li:first-child{
+	padding: 0px;
+	padding-right: 40px;
+	font-size:16px;
+	font-weight: bold;
+}
+
+.students .title ul li:first-child a{
+	color: #000;
+}
+
+
+.students .works{
+	height: 270px;
+	background-color: green;
+}
+
+.students .item{
+	/* w: 1100-212*5 = 40 */
+	width: 212px;
+	height:inherit;
+	background-color: blue;
+	float: left;
+	margin-right:10px;
+}
+.students .item:last-child{
+	margin-right: 0px;
+}
+.students .work-image{
+	height:170px;
+	background-color: orangered;
+}
+.students .work-image img{
+	height: inherit;
+	width: inherit;
+}
+.students .work-info{
+	padding: 12px;
+	height: 100px;
+	box-sizing: border-box;
+	background-color: pink;
+}
+
+.students .work-desc{
+	height:76px;
+	width: 96px;
+	background-color: #fff;
+	position: relative;
+}
+.students .work-desc p{
+	margin: 0px;
+	line-height: 24px;
+}
+.students .work-desc p.txt-1{
+	font-size: 14px;
+	color:#686868;
+}
+.students .work-desc p.txt-2{
+	font-size: 12px;
+	color:#b0b0b0;
+}
+.students .work-desc p.txt-3{
+	color: #e60012;
+	font-size: 12px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+
+
+.students .student-image{
+	width: 76px;
+	height:76px;
+	background-color: #000;
+}
+.students .student-image img{
+	height: inherit;
+	width: inherit;
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			 #in>div{
+                width:150px;
+                height:80px;
+                border:1px solid #ddd;
+                position:absolute;
+                top:310px;
+                left:425px;
+        }
+        #c1{
+                transform:rotatey(0deg) translatez(200px);
+        }
+        #c2{
+                transform:rotatey(180deg) translatez(200px);
+        }
+        #c3{
+                transform:rotatey(60deg) translatez(200px);
+        }
+        #c4{
+                transform:rotatey(120deg) translatez(200px);
+        }
+        #c5{
+                transform:rotatey(240deg) translatez(200px);
+        }
+        #c6{
+                transform:rotatey(300deg) translatez(200px);
+        }
+        /*卦图中70左浮动上外边距10px*/
+        #a3,#a18,#a21,#a24,#a9,#a13{
+                width:70px;
+                height:20px;
+                background:#f00;
+                margin-top:10px;
+                float:left;
+        }
+        /*卦图中70左浮动*/
+        #a11,#a25,#a6{
+                width:70px;
+                height:20px;
+                background:#f00;
+                float:left;
+        }
+        /*卦图中150左浮动*/
+        #a2,#a16,#a20{
+                width:150px;
+                height:20px;
+                background:#f00;
+                float:left;
+        }
+        /*卦图中70右浮动上外边距10px*/
+        #a4,#a10,#a14,#a17,#a22,#a23{
+                width:70px;
+                height:20px;
+                background:#f00;
+                margin-top:10px;
+                float:right;
+        }
+        /*卦图中70右浮动*/
+        #a7,#a12,#a26{
+                width:70px;
+                height:20px;
+                background:#f00;
+                float:right;
+        }
+        /*卦图中150右浮动上外边距10px*/
+        #a5,#a8,#a15,#a19,#a27,#a28{
+                width:150px;
+                height:20px;
+                background:#f00;
+                margin-top:10px;
+                float:right;
+        }
+        #all{
+                width:1000px;
+                height:700px;
+                margin:0 auto;
+                padding:10px;
+                perspective:2000px;
+        }
+        #in{
+                width:1000px;
+                height:700px;
+                position:relative;
+                transform:rotatex(-30deg);
+                transform-style:preserve-3d;
+                animation:taiji 10s linear infinite;
+        }
+        #all #bagua{
+                width:200px;
+                height:200px;
+                border-radius:200px;
+                overflow:hidden;
+                top:250px;
+                left:400px;
+                transform:rotatex(90deg) translatez(-50px);
+                animation:heibai 2s linear infinite;
+        }
+        #bagua #black{
+                height:200px;
+                width:100px;
+                background:#000;
+                float:right;
+                position:relative;
+        }
+        #bagua #white{
+                height:200px;
+                width:100px;
+                background:#fff;
+                float:left;
+                position:relative;
+        }
+        #black .small{
+                width:100px;
+                height:100px;
+                background:#fff;
+                border-radius:50px;
+                position:absolute;
+                top:0;
+                left:-50px;
+        }
+        #black .small .hand{
+                width:20px;
+                height:20px;
+                background:#000;
+                border-radius:10px;
+                position:absolute;
+                top:40px;
+                left:50px;
+        }
+        #white .big{
+                width:100px;
+                height:100px;
+                background:#000;
+                border-radius:50px;
+                position:absolute;
+                bottom:0;
+                left:50px;
+        }
+        #white .big .header{
+                width:20px;
+                height:20px;
+                background:#fff;
+                border-radius:10px;
+                position:absolute;
+                top:40px;
+                left:50px;
+        }
+        @keyframes taiji{
+                0%{
+                        transform:rotatex(-30deg) rotatey(0deg);
+                       
+                }
+                100%{
+                        transform:rotatex(-30deg) rotatey(360deg);
+                       
+                }
+        }
+        @keyframes heibai{
+                0%{
+                        transform:rotatex(90deg) rotate(0deg);
+                }
+                100%{
+                        transform:rotatex(90deg) rotate(720deg);
+                }
+        }
+		</style>
+	</head>
+	<body>
+		 <div id="all">
+                <div id="in">
+                        <div id="c1">
+                                <div id="a2"></div>
+                                <div id="a3"></div>
+                                <div id="a4"></div>
+                                <div id="a5"></div>
+                        </div>
+                        <div id="c2">
+                                <div id="a6"></div>
+                                <div id="a7"></div>
+                                <div id="a8"></div>
+                                <div id="a9"></div>
+                                <div id="a10"></div>
+                        </div>
+                        <div id="c3">
+                                <div id="a11"></div>
+                                <div id="a12"></div>
+                                <div id="a13"></div>
+                                <div id="a14"></div>
+                                <div id="a15"></div>
+                        </div>
+                        <div id="c4">
+                                <div id="a16"></div>
+                                <div id="a17"></div>
+                                <div id="a18"></div>
+                                <div id="a19"></div>
+                        </div>
+                        <div id="c5">
+                                <div id="a20"></div>
+                                <div id="a21"></div>
+                                <div id="a22"></div>
+                                <div id="a23"></div>
+                                <div id="a24"></div>
+                        </div>
+                        <div id="c6">
+                                <div id="a25"></div>
+                                <div id="a26"></div>
+                                <div id="a27"></div>
+                                <div id="a28"></div>
+                                <div id="a29"></div>
+                        </div>
+                        <div id="bagua">
+                                <div id="black">
+                                        <div class="small">
+                                                <div class="hand"></div>
+                                        </div>
+                                </div>
+                                <div id="white">
+                                        <div class="big">
+                                                <div class="header"></div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+		
+		
+		<div id="bagua"></div>
+		
+	</body>
+</html>

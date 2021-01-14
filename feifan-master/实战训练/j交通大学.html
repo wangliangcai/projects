@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var ul = $(".aside-right ul");
+				var count = $(".aside-right li").length;  //图片的数量
+				var imageWidth = $(".aside-right").width();  //图片的宽度
+				var index = 0; //图片轮播索引
+				var points = $(".points");
+				
+				for(var i=0;i<count;i++){
+					points.append("<span></span>");
+				}
+				
+				points.css("margin-left",-12*count+"px").children("span").eq(0).addClass("active");
+				
+				
+				var first = $(".aside-right ul li:first-child").clone();  //克隆第一张
+				var last = $(".aside-right ul li:last-child").clone();   //克隆最后一张
+				
+				ul.append(first);
+				last.insertBefore($(".aside-right ul li:first-child"));
+				
+				//设置ul的宽度
+				ul.width((count+2)*imageWidth);
+				
+				var t = setInterval(function(){
+//					点击的状态切换
+					index = (index+2)%count;
+					imageSwitch(index);
+					
+				},3000);
+				
+				$(".aside-right").hover(function(){
+					clearInterval(t);
+					
+				},function(){
+					t = setInterval(function(){
+						index = (index+2)%count;
+						imageSwitch(index);
+					},3000);
+					
+				});
+				//点上添加悬停事件 进行图片的切换
+				points.children("span").hover(function(){
+					index = $(this).index();
+					imageSwitch(index);
+				});
+				
+				//下一页
+				$(".aside-right .next").click(function(){
+					index = (index+1)%count;
+					imageSwitch(index);
+				});
+				//上一页
+				$(".aside-right .prev").click(function(){
+					index = (index+count-1)%count;
+					imageSwitch(index);
+				});
+				
+				//图片切换处理函数
+				function imageSwitch(i){
+					//停掉没执行完成的动画
+					ul.stop(true,true);
+					//下面点的状态切换
+					points.children("span").removeClass("active").eq(i).addClass("active");
+					
+					
+					if((i == 0)&&(parseInt(ul.css("left"))<(imageWidth*-2))){
+						//针对第一张做特殊处理
+						ul.animate({
+							left:(count+1)*imageWidth*-1+"px"
+						},500,function(){
+							ul.css("left",-1*imageWidth+"px");
+						});
+						
+						
+					}else if((i==(count-1))&&(parseInt(ul.css("left"))>(imageWidth*-2))){
+						//针对最后一张做特殊处理
+						ul.animate({
+							left:'0px'
+						},500,function(){
+							ul.css("left",-1*count*imageWidth+"px");
+						});
+						
+					}else{
+						ul.animate({
+							letf:(i+1)*imageWidth*-1+"px"
+						},500);
+					}
+				}
+			});
+		</script>
+		
+		<link rel="stylesheet" type="text/css" href="css/交大e.css"/>
+	</head>
+	<body>
+		<div class="top w">
+			<div class="imge left">
+				<img src="img/images/images/jiaoda2_03.png" />
+			</div>
+			<div class=" state left">
+				<p>多国留学课程咨询中心</p>
+			</div>
+			<div class=" phone right">
+				<ul>
+					<li>联系我们</li>
+					<li>咨询专家</li>
+					<li>返回首页</li>
+					<li>400-6968-165</li>
+				</ul>
+			</div>
+		</div>
+		<hr />
+		<div class="img-1 w">
+			<img src="img/images/jiaoda1_03.png" />
+		</div>
+		<div class="nav">
+			<div class="w">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">项目介绍</a></li>
+					<li><a href="#">本科留学简章</a></li>
+					<li><a href="#">硕士留学简章</a></li>
+					<li><a href="#">留学问答</a></li>
+					<li><a href="#">合作大学</a></li>
+					<li><a href="#">名师风采</a></li>
+					<li><a href="#">报考指南</a></li>
+					<li><a href="#">在线报名</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header w">
+ 			<div class="logo left">
+				<img src="img/images/images/1_07.png" />
+			</div>
+			<div class="aside-right right">
+				<ul>
+				<li><img src="img/images/images/0.1r.png" width="727px" /></li>
+				<li><img src="img/jiaoda)4D.png" width="727px"/></li>
+				<li><img src="img/jiaoda}(3(6JW.png" width="727px"/></li>
+				<li><img src="img/jiaodd`@ZC.png" width="727px" /></li>
+				<li><img src="img/koajiao4.png" width="727px"/></li>
+				</ul>
+				
+				<div class="points"></div>
+				<div class="prev">
+					«
+				</div>
+				<div class="next">
+					»
+				</div>
+			
+		</div>
+		</div>
+		<div class="new w">
+		<div class="project left">
+			<div class="title">
+				<div class="jian"></div>
+			</div>
+			<div class="project-2">
+				<img src="img/images/images/6.png" />
+				<div class="wen right">
+					<ul class="wen-1">
+						<li>
+							<p>上海交通大学继续教育学院是上海交通大学的直属学院，学院自成立起始终贯彻
+						“练好内功，稳步发展，保证质量，形成特色”的办学方针，学院立足上海、
+						辐射江浙、面向西部，构建了比较完善的技术支撑平台和现代远程教育体系。
+						坐落在上海交通大学的七宝校区，占地面积328亩，有教学楼、实验楼、办公楼
+						、学生宿舍、图书馆、食堂、体育馆等。校园内古木参天、绿树成荫，有多个上海市历
+						史文物保护景点，整个校园充满着浓郁的文化底蕴。上海交通大学深厚的办学传统，
+						奋发图强的发展历程，特别是改革开放以来取得的巨...........<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+						</li>
+					</ul>
+					
+				</div>
+			</div>
+			</div>
+		<div class="aside right">
+			<div class="course">
+				<div class="course-1">
+					</div>
+					<div class="course-2">
+					<p>美国北卡罗来纳大学本科直通车，是上海交通大学与北
+						卡罗来纳大学创新课程中心共同依据中国学生特点而设计的创新型课程，
+						适合学习程度优秀且希望就读美国名校并减免部分学分的中国学生。本项目对
+					...........<a href="#"><span style="color: #ffae00;">【详细】</span></a>
+					</p>
+					</div>
+			</div>
+		</div>
+		</div>
+			<div class="international w">
+				<div class="schedule">
+					<div class="schedule-1"></div>
+				</div>
+				<div class="A-level left">
+					<div class="zhaosheng">
+						<div class="zhong">
+						</div>
+						<div class="ons">
+							<p><a href="#">A-Levol招生简章</a></p>
+						</div>
+					</div>
+					<div class="zhaosheng">
+						<div class="lsou">
+						</div>
+						<div class="mei">
+								<p><a href="#">美加方向招生简章</a></p>
+							</div>
+					</div>
+				</div>
+			</div>
+		
+		<!--本科课程推荐-->
+		<div class="ben w">
+				<div class="benk">
+					<div class="benk1">
+						<img src="img/images/images/102.png" />
+					</div>
+					<div class="biaodan left">
+						<!--1-->
+					<div class="meiguo">
+						<div class="bei">
+									<h2>美国北卡</h2>
+									<h2>本科直通车</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">美国北卡本科课程</a>
+					</div>
+						<!--2-->
+						<div class="meiguo">
+							
+						<div class="bei" style="background-color: #96794d;">
+									<h2>多伦多大学</h2>
+									<h2>本科直通车</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">多伦多大学本科课程</a>
+					</div>
+						<!--3-->
+						<div class="meiguo">
+							
+						<div class="bei" style="background-color: #4262ad;">
+									<h2>国际艺术</h2>
+									<h2>精品班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">国际艺术精品班</a>
+					</div>
+					</div>
+					<div class="biaodan left">
+						<!--1-->
+						<div class="meiguo">
+						<div class="bei" style="background-color: #ad6d41;">
+									<h2>美国</h2>
+									<h2>精英班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">美国精英班</a>
+					</div>
+					<!--2-->
+					<div class="meiguo">
+							
+						<div class="bei" style="background-color: #1870d4;">
+									<h2>北欧</h2>
+									<h2>精品本科班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">北欧精品本科班</a>
+					</div>
+					<!--3-->
+						<div class="meiguo">
+							
+						<div class="bei" style="background-color: #acae41;">
+									<h2>日本名校</h2>
+									<h2>精品班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">日本名校精品班</a>
+					</div>
+					</div>
+					<div class="biaodan left">
+						<!--1-->
+						<div class="meiguo">
+						<div class="bei" style="background-color: #ad9241;">
+									<h2>美国</h2>
+									<h2>精品班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">美国精品班</a>
+					</div>
+					<!--2-->
+					<div class="meiguo">
+							
+						<div class="bei" style="background-color: #41ad8d;">
+									<h2>香港</h2>
+									<h2>名校直通车</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">香港名校直通车</a>
+					</div>
+					<!--3-->
+					<div class="meiguo">
+							
+						<div class="bei" style="background-color: #8142ad;">
+									<h2>日本游戏动漫</h2>
+									<h2>大师班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">日本游戏动漫大师班</a>
+					</div>
+						
+					</div>
+					<div class="biaodan left">
+						<!--1-->
+						<div class="meiguo">
+							
+						<div class="bei" style="background-color: #a7ad41;">
+									<h2>英国</h2>
+									<h2>精英班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">英国精英班</a>
+					</div>
+					
+						<div class="meiguo">
+							
+						<div class="bei" style="background-color: #41a7ac;">
+									<h2>莫纳什本科</h2>
+									<h2>直通车</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">莫纳什本科直通车</a>
+					</div>
+					
+						<div class="meiguo">
+							
+						<div class="bei" style="background-color: #a240ad;">
+									<h2>韩国精英</h2>
+									<h2>本科直通车</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">韩国精英本科直通车</a>
+					</div>
+					
+					</div>
+					
+					<div class="biaodan left">
+						<!--1-->
+						<div class="meiguo">
+						<div class="bei" style="background-color: #75ad40;">
+									<h2>英国</h2>
+									<h2>精品班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">英国精品班</a>
+					</div>
+					<!--2-->
+					<div class="meiguo">
+							
+						<div class="bei" style="background-color: #4190ae;">
+									<h2>澳洲名校</h2>
+									<h2>直通车</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">澳洲名校直通车</a>
+					</div>
+					<!--3-->
+					<div class="meiguo">
+							
+						<div class="bei" style="background-color: #bc2e9c;">
+									<h2>IDP</h2>
+									<h2>国际文凭课程</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">3+1IDP国际课程</a>
+					</div>
+						
+					</div>
+					
+					<div class="biaodan left" style="height: 268px; border-bottom: 0px;">
+						<!--、1-->
+						<div class="meiguo">
+						<div class="bei" style="background-color: #4174ad;">
+									<h2>加拿大</h2>
+									<h2>精品本科班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">加拿大精品本科班</a>
+					</div>
+						<!--2-->
+						<div class="meiguo">
+							
+						<div class="bei" style="background-color: #4141b1;">
+									<h2>国际艺术</h2>
+									<h2>精英班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">国际艺术精英班</a>
+					</div>
+						<!--3-->
+					</div>
+					</div>
+				
+				
+			<!--shuoshi硕士课程-->
+		<div class="shuo w">
+			<div class="shuoshi">
+				<div class="lg">
+					<a href="#"><img src="img/images/images/120_10.png" /></a>
+				</div>
+				<!--1-->
+				<div class="jing">
+					<div class="meiguo">
+							
+						<div class="bei" style="background-color: #cd3db6;">
+									<h2>美国</h2>
+									<h2>精品硕士班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">美国精品硕士班</a>
+					</div>
+				</div>
+				<!--2-->
+				<div class="jing" style="margin-left: 0;">
+					
+					<div class="meiguo">
+							
+						<div class="bei" style="background-color: #463dcc;">
+									<h2>英国</h2>
+									<h2>国际硕士班</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">英国国际硕士班</a>
+					</div>
+					
+				</div>
+				<!--3-->
+				<div class="jing" style="margin-left: 0;">
+					<div class="meiguo">
+							
+						<div class="bei">
+									<h2>英美艺术</h2>
+									<h2>硕士直通车</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">英美艺术硕士直通车</a>
+					</div>
+					
+				</div>
+				<!--4-->
+				<div class="jing" style="margin-left: 0;">
+					<div class="meiguo">
+							
+						<div class="bei" style="background-color: #b753c3;">
+									<h2>专升硕</h2>
+									<h2>直通车</h2>
+						</div>
+					</div>
+						<div class="mie-3">
+					<a href="#">专升硕直通车</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		</div>
+         	<div class="bos w">
+         			<a href="#"><img src="img/images/top-1_03_03.png" /></a>
+         	</div>
+        <!--课程列表-->
+        <div class="bot w">
+        	<div class="lo">
+        		<img src="img/images/ffdsf_03.png" />
+        	</div>
+        	<!--2-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/fd_03.png" /></a>
+        		</div>
+        		<div class="kalo right">
+        			<h1>美国北卡罗来纳大学本科直通车</h1>
+        			<p>美国北卡罗来纳大学本科直通车，是上海交通大学与
+        				美国北卡罗来纳大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        		
+        	</div>
+        	<!--3-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/12_06.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>美国精英国际国际本科项目</h1>
+        			<p>美国精英国际国际本科项目，是上海交通大学与
+        				美国精英国际国际大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--4-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/58_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>英国精品国际本科项目</h1>
+        			<p>英国精品国际本科项目，是上海交通大学与
+        				英国精品国际本科大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--5-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/59_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>香港名校直通车</h1>
+        			<p>香港名校直通车，是上海交通大学与
+        				香港名校大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        		
+        	</div>
+        	<!--6-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/60_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>莫纳什五星本科直通车</h1>
+        			<p>莫纳什五星本科直通车，是上海交通大学与
+        				莫纳什五星本科大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        		
+        	</div>
+        	<!--7/-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/61_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>澳洲名校直通车</h1>
+        			<p>澳洲名校直通车，是上海交通大学与
+        				澳洲名校大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        		
+        	</div>
+        	<!--8-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/62_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>加拿大精品国际本科直通车招生简章</h1>
+        			<p>加拿大精品国际本科直通车招生简章，是上海交通大学与
+        				加拿大精品国际本科大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        		
+        	</div>
+        	<!--9-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/63_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>多伦多精品国际本科直通车招生简章</h1>
+        			<p>多伦多精品国际本科直通车招生简章，是上海交通大学与
+        				多伦多精品国际本科大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--10-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/64_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>北欧精品国际本科直通车招生简章</h1>
+        			<p>北欧精品国际本科直通车招生简章，是专门针对北欧四国及荷兰名校而
+        				设计适合基础比较好且希望去荷兰获得高额奖学金的，是上海交通大学与
+        				北欧精品国际本科大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--11-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/65_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>国际艺术精英班</h1>
+        			<p>国际艺术精英班，是上海交通大学与
+        				国际艺术大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--12-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/66_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>国际艺术精品班</h1>
+        			<p>国际艺术精品班，是上海交通大学与
+        				国际艺术大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--13-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/47_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>英国精英国际本科项目</h1>
+        			<p>英国精英国际本科项目，是上海交通大学与
+        				英国精英国际本科大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--14-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/25_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>美国精品国际本科班项目</h1>
+        			<p>美国精品国际本科班项目，是上海交通大学与
+        				美国精品国际本科大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--15-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/67_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>日本名校精品班</h1>
+        			<p>日本名校精英班，是上海交通大学与
+        				日本名校大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--16-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/68_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>日本游戏动漫大师班</h1>
+        			<p>日本游戏动漫大师班，本项目由上海交通大学继续教育学院日本留学桥与日本游戏动漫相关大学合作，是上海交通大学与
+        				日本游戏动漫大师大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        		
+        	</div>
+        	<!--17-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/70_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>韩国精英本科直通车</h1>
+        			<p>韩国精英本科直通车，是上海交通大学与
+        				韩国精英本科大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--18-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/71_03.png "/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>3+1国际文凭课程</h1>
+        			<p>3+1国际文凭课程3年制IDP国际本硕课程目前到英美澳等众多名校的肯定，是上海交通大学与
+        				国际大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--19-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/73_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>美国精品硕士班</h1>
+        			<p>美国精品硕士班，是上海交通大学与北卡
+        				罗来纳大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--20-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/74_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>英国国际硕士班</h1>
+        			<p>英国国际硕士本，是上海交通大学与
+        				英国国际大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        	<!--21-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/75_03.png"/></a>
+        		</div>
+        		<div class="kalo right">
+        			<h1>英美艺术硕士直通车</h1>
+        			<p>英美艺术硕士直通车，是上海交通大学与
+        				英美艺术大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        		
+        	</div>
+        	<!--22-->
+        	<div class="tat">
+        		<div class="tu left">
+        			<a href="#"><img src="img/images/76_03.png"/></a>
+        		</div>
+        		
+        		<div class="kalo right">
+        			<h1>专科升硕士直通车</h1>
+        			<p>专科升硕士直通车，是上海交通大学与北卡
+        				罗来纳大学创新课程中心共同依据中国学生特点而设计的
+        				生创建真实、原汁原味的西方教育环境，帮助学生快速掌
+        				，从而保证学生平稳过渡。创新型教学体验。汲取中美双方优势，
+        				引入新型授课方式，应用先进信息技术实现课程教材全部在线，学生可以通过网络
+        				实现从中式教育方法向美式教育方法的过渡，同时也能...<a href="#"><samp style="color: #ffae00;">【详细】</samp></a></p>
+        		<div class="xian left">
+        			<a href="#"><span style="color: #FFFFFF;">查看简章</span></a>
+        		</div>
+        		<div class="xian left" style="margin-left: 120px; background-color: blue;">
+        			<a href="#"><span style="color: #FFFFFF;">在线咨询</span></a>
+        		</div>
+        		</div>
+        		
+        	</div>
+        </div>
+
+		<div class="dibu w">
+			<div class="huoz">
+				<a>合作院校</a>
+			</div>
+				 <ul>
+				 	<li><a href="#">美国</a></li>
+				 	<li><a href="#">英国</a></li>
+				 	<li><a href="#">澳洲</a></li>
+				 	<li><a href="#">加拿大</a></li>
+				 	<li><a href="#">荷兰</a></li>
+				 	<li><a href="#">丹麦</a></li>
+				 	<li><a href="#">瑞典</a></li>
+				 	<li><a href="#">芬兰</a></li>
+				 	<li><a href="#">挪威</a></li>
+				 	<li><a href="#">MORE></a></li>
+				 </ul>
+		</div>
+			<div class="bootm w">
+				<div class="bio">
+				<ul>
+					<li><img src="img/images/j7_03.gif"/></li>
+					<li><img src="img/images/j3_03.png"/></li>
+					<li><img src="img/images/j4_03.png"/></li>
+					<li><img src="img/images/j5_03.png"/></li>
+					<li><img src="img/images/j6_03.png"/></li>
+					<li><img src="img/images/j7_05.png"/></li>
+				</ul>
+			</div>
+			<div class="biao">
+				<ul>
+					<li><a href="#">伯明翰大学</a></li>
+					<li><a href="#">邓迪大学</a></li>
+					<li><a href="#">帝国理工大学</a></li>
+					<li><a href="#">华威大学</a></li>
+					<li><a href="#">剑桥大学</a></li>
+					<li><a href="#">克兰非尔德大学</a></li>
+				</ul>
+				</div>
+				<div class="bio">
+				<ul>
+					<li><img src="img/images/j8_07.png"/></li>
+					<li><img src="img/images/j9_07.png"/></li>
+					<li><img src="img/images/j10_07.png"/></li>
+					<li><img src="img/images/j11_07.png"/></li>
+					<li><img src="img/images/j12_06.png"/></li>
+					<li><img src="img/images/j13_07.png"/></li>
+				</ul>
+			</div>
+			<div class="biao">
+				<ul>
+					<li><a href="#">伯明翰大学</a></li>
+					<li><a href="#">邓迪大学</a></li>
+					<li><a href="#">帝国理工大学</a></li>
+					<li><a href="#">华威大学</a></li>
+					<li><a href="#">剑桥大学</a></li>
+					<li><a href="#">克兰非尔德大学</a></li>
+				</ul>
+				</div>
+			</div>
+			<div class="qunx w">
+				<table>
+					<tr><th>留学课程咨询电话：400—808—1951</th></tr>
+					<tr><th>咨询	QQ:2606989111,2606397111</th></tr>
+					<tr><th>----版权所有：北京时代瑞轩教育科技有限公司</th></tr>
+				</table>
+				<div class="shy">
+					<a href="#top">返回首页</a>
+				</div>
+				<div class="shdu">
+					<img src="img/fgghh1000_03.png" />
+				</div>
+			</div>
+			<div class="dingbo">
+				<a href="#top">顶</a>
+			</div>
+</html>
+					
+
+
+
+
+
+

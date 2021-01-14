@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin: 50px auto;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/jquery.rotate.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js" ></script>
+		<script type="text/javascript">
+			
+			$(".box").rotate({
+				angle:0,//起始角度
+				animateTo:360,//目标角度
+				duration:2000,//动画时间
+				easing:$.easing.easeOutBounce,//动画效果
+				callback:function(){//回调函数
+					console.log("动画执行完毕！");
+				}
+			});
+			
+			
+		</script>
+	</body>
+</html>

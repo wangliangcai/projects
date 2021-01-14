@@ -1,0 +1,136 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1495781161863'); /* IE9*/
+  src: url('iconfont.eot?t=1495781161863#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1495781161863') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1495781161863') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1495781161863#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gouwuche:before { content: "\e60a"; }
+
+.icon-liebiao:before { content: "\e605"; }
+
+.icon-sousuo_sousuo:before { content: "\e62c"; }
+
+/*主题*/
+html{
+   	margin: 0 auto;
+   	font-family: "微软雅黑";
+		font-size: calc(100vw/3.75);
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,
+pre,form,fieldset,input,p,
+blockquote,th,td,ins,hr,img,a{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+a{
+	target:_blank;
+}
+address,caption,cite,code,dfn,em,th,var{
+	font-style:normal;
+	font-weight:normal;
+	}
+#need label.old_password {
+	background-position: 0 -277px;
+	}
+#need label.new_password {
+	background-position: 0 -1576px;
+	}
+#need label.rePassword {
+	background-position: 0 -1638px;
+	}
+#need label.email {
+	background-position: 0 -429px;
+	}
+a:hover{
+	text-decoration: none;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+li{
+	padding: 0;
+	margin: 0;
+}
+iframe{
+	overflow: hidden;
+	border: none;
+}
+body{
+	font-family: "微软雅黑";
+	/*height: 100%;*/
+	background-color: #fff;
+	/*padding-bottom: 0.5rem;*/  /*1rem=100px*/
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.foot{
+	width: 100%;
+	height: .45rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+/*滚动条滑到的时候顶部导航样式*/
+.bottom{
+	/*width: 100%;*/
+	/*padding: 0 5%;*/
+	z-index: 9;
+	position: fixed;
+ /* 使之可以滚动 */
+  overflow-y: scroll;
+  /* 增加该属性，可以增加弹性 */
+  -webkit-overflow-scrolling: touch;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/*fixed失效问题*/
+.body-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch; /*ios滑动不流畅问题*/
+}
+
+.top-body{
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch; /*ios滑动不流畅问题*/
+}

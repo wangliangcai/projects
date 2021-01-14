@@ -1,0 +1,948 @@
+
+.box{
+		width: 100%;
+		height: 450px;
+		margin-bottom: 20px;
+		overflow: hidden;
+		position: relative;
+	}
+	.box_ul{
+		position: relative;
+		width: inherit;
+		height: inherit;
+	}
+	.box_ul img{
+		width: inherit;
+		height: inherit;
+		list-style: none;
+		float: left;
+		top: 0;
+		left: 0;
+		position: absolute;
+		-webkit-filter: brightness(0.8) opacity(0) grayscale(20%);
+    	filter: brightness(0.8) opacity(0) grayscale(20%);
+		transition: transform 30s, filter 2s;
+	}
+	.box_ul img.activeimg{
+		-webkit-transform: scale(2);
+		-ms-transform: scale(2);
+		-o-transform: scale(2);
+		transform: scale(2);
+		-webkit-filter: brightness(1) opacity(1) grayscale(0);
+    	filter: brightness(1) opacity(1) grayscale(0);
+	}
+	.btns{
+			width: 70px;
+			height:180px;
+			background: rgba(255,255,255,.2);
+			top: 50%;
+			margin-top:-90px; 
+			line-height: 160px;
+			text-align: center;
+			position: absolute;
+			cursor: pointer;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			display: none;
+	}
+	.btn-l{
+		left: 0;
+	}
+	.btn-r{
+		right: 0;
+	}
+		.init{
+			position: absolute;
+			top: 50%;
+			width: 45px;
+			border: 2px solid rgba(255,157,0,.8);
+			transform-origin: 0 0;		/*50%是X 100%反过来*/
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+		}
+		.left_up{
+			transform:translateX(-35%) rotate(45deg);
+		}
+		.left_dn{
+			transform:translateX(-35%) rotate(-45deg);
+		}
+		.right_up{
+			transform: translateX(35%) rotate(-135deg);
+		}
+		.right_dn{
+			transform: translateX(35%) rotate(135deg);
+		}
+		.btn-l:hover ,.btn-r:hover{
+			background: rgba(255,157,0,.4);
+		} 
+		.btn-l:hover .left_up{
+			transform:translateX(-35%)rotate(30deg);
+			border-color:white ;
+		}
+		.btn-l:hover .left_dn{
+			transform:translateX(-35%) rotate(-30deg);
+			border-color:white ;
+		}
+		.btn-r:hover .right_up{
+			transform:translateX(35%)rotate(-150deg);
+			border-color:white ;
+		}
+		.btn-r:hover .right_dn{
+			transform:translateX(35%) rotate(150deg);
+			border-color:white ;
+		}
+
+
+		.box_btn_a{
+		position: absolute;
+		left: 50%;
+		bottom: 8px;
+	}
+	.btn_a{
+			display: block;
+			height: 10px;
+			width: 30px;
+			float: left;
+			background-color: rgba(255,255,255,.5);
+			margin-right: 10px;
+			opacity: 1;
+			-webkit-transition: .8s;
+			-o-transition: .8s;
+			transition: .8s;
+	}
+	.box_btn_a .active{
+		background-color: rgba(255,157,0,.8);
+	}
+	
+
+
+
+
+.tip_bar{
+	margin: 0 0 20px 0;
+	height: 52px;
+	line-height: 52px;
+	border-bottom: 1px solid #ddd;
+}
+.heart{
+	font-size: 25px;
+	padding-right: 8px;
+	color: #ff9d00;
+}
+.tip_title{
+	width: auto;
+	padding: 0;
+	font-size:27px;
+}
+.tip_title_bar{
+	width: auto;
+	padding: 0 0 0 4px;
+	margin: 0;
+}
+.tip_title_bar li{
+	display: inline-block;
+}
+.tip_title_bar li:focus{
+	outline: none;
+	border: none;
+}
+.tip_title_bar_a{
+	color: #666;
+	border-right: 1px solid #ccc;
+	padding: 0px 15px 0px 15px;
+	-o-transition: .4s;
+	-ms-transition: .4s;
+	-moz-transition: .4s;
+	-webkit-transition: .4s;
+}
+#hotel_a{
+	border: none;
+}
+.tip_title_bar_a:focus{
+	text-decoration: none;
+	outline: none;
+}
+.tip_title_bar .active{
+	font-weight: 600;
+	color: #000;
+	border-right: 1px solid #ccc;
+}
+.tip_title_bar_a:hover{
+	text-decoration: none;
+	font-weight: 600;
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+.thumbnail .place_bar{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height:220px;
+	overflow: hidden;
+}
+.thumbnail .place_top_bar{
+	position: absolute;
+	top: 15px;
+	right: 0px;
+	width: 70px;
+	height: 35px;
+	line-height: 35px;
+    text-align: center;
+	background: #F18F00;
+	box-shadow: 2px 2px 2px #000;
+	border-radius:20px 0 0 20px; 
+}
+.thumbnail .place_top{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+}
+.thumbnail .place_bottm_bar{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 10px 15px;
+	background: rgba(0,0,0,0.5);
+	transition: .6s;
+	-o-transition: .6s;
+	-ms-transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+}
+.thumbnail .place_user_photo{
+	width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    margin-left: 1px;
+    border-radius: 50%;
+    background: #fff;
+    vertical-align: middle;
+}
+.thumbnail .adivc{
+	margin-left: 10px;
+	color: #ccc;
+}
+.thumbnail .place_photo{
+	width: 100%;
+	height:100%;
+	border-radius: 4px;
+	-o-transition: .6s;
+	-ms-transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;	
+}
+
+.thumbnail .place_con{
+	width: 100%;
+	height:40px;
+	border-bottom: 1px solid #eee; 
+}
+.thumbnail .place_title{
+	color: #222;
+	font-size: 24px;
+	font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+.thumbnail .place_title:hover{
+	color: #4d92d9;
+}
+.thumbnail .btn_buy{
+	float: right;
+	padding: 0px 5px 0 5px;
+	width: auto;
+    height: 25px;
+    line-height: 25px;
+    background-color: #3c763d;
+    box-shadow: 0 1px 0 0 #58af5a;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.thumbnail .btn_buy:hover{
+	background-color: #58af5a;
+	text-decoration: none;
+}
+.thumbnail .counts{
+	width: 100%;
+	margin: 12px 0 0 0;
+}
+.thumbnail .counts a{
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	display: inline-block;
+	color: #aaa;
+	font-size: 13px;
+}
+.thumbnail .counts a:hover{
+	color:#428bca;
+}
+.thumbnail .counts .right_nine{
+	border-right: 1px solid #eee;
+}
+.thumbnail .text-desc{
+	position: absolute;
+	left:0;
+	top: 0;
+	z-index: -5;
+	width: 50%;
+	height:220px;
+	background: white;
+	-o-transition: .6s;
+	-ms-transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+	transform: translateX(-50%); opacity: 0;
+	-o-transform: translateX(-50%); opacity: 0;
+	-ms-transform: translateX(-50%); opacity: 0;
+	-moz-transform: translateX(-50%); opacity: 0;
+	-webkit-transform: translateX(-50%); opacity: 0;
+}
+.thumbnail .text-desc h3{
+	text-align: center;
+	color: #333;
+}
+.thumbnail .text-desc p{
+	margin-top:20px; 
+	text-indent: 28px;
+	max-height: 80px;
+	height: 80px;
+    text-align: justify;
+	color: #333;
+	overflow: hidden;
+}
+.thumbnail .text-desc .btn_more{
+	display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 4px;
+    border: 2px solid #4d92d9;
+    background-color: #4d92d9;
+    text-decoration: none;
+    transition: 0.4s;
+    -o-transition: 0.4s;
+	-ms-transition: 0.4s;
+	-moz-transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+.thumbnail .text-desc .btn_more:hover{
+	 background-color: #2769ad;
+}
+.thumbnail .place_bar:hover .place_photo{
+	transform: scale(0.4) translateX(70%); position: relative;
+	-o-transform: scale(0.4) translateX(70%); position: relative;
+	-ms-transform: scale(0.4) translateX(70%); position: relative;
+	-moz-transform: scale(0.4) translateX(70%); position: relative;
+	-webkit-transform: scale(0.4) translateX(70%); position: relative;
+}
+.thumbnail .place_bar:hover .text-desc{
+	transform: translateX(0px); opacity: 1; z-index: 9;
+	-o-transform: translateX(0px); opacity: 1; z-index: 9;
+	-ms-transform: translateX(0px); opacity: 1; z-index: 9;
+	-moz-transform: translateX(0px); opacity: 1; z-index: 9;
+	-webkit-transform: translateX(0px); opacity: 1; z-index: 9;
+}
+.thumbnail .place_bar:hover .place_bottm_bar{
+	opacity: 0;
+}
+.thumbnail .place_bar:hover{
+	border-bottom: 1px solid #f3f3f3;
+}
+
+
+/*热门游记*/
+.hot_warp .img_warp{
+	width: 100%;
+	height: 168px;
+	overflow: hidden;
+	position: relative;
+}
+.hot_warp_con{
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+	color: #f6f6f6;
+	padding-left:26px;
+	text-shadow: 0 0 4px rgba(0,0,0,.4);
+	background: url(../images/sprite.png) no-repeat -90px -125px;
+}
+.hot_warp img{
+	-o-transition: .6s;
+	-ms-transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+	filter:brightness(.8);
+	filter:alpha(brightness(.8))
+}
+.hot_warp .con_title{
+	font-size: 16px;
+    overflow: hidden;
+    padding:5px 0  5px 0; 
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hot_warp .address_info{
+	padding:5px 0  5px 0; 
+	color: #999;
+}
+.hot_warp .text_bar{
+	width: 100%;
+	height: 35px;
+	max-height: 35px;
+	color: #666;
+    font-size: 12px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.hot_warp .user_bar{
+	padding:5px 0  5px 0; 
+}
+.hot_warp .user_bar img{
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin: 0 5px 0 0;
+}
+.hot_warp .user_name,.data{
+	color: #999;
+	font-size: 12px;
+}
+.hot_warp .data{
+	float: right;
+}
+.hot_box{
+	position: relative;
+	transition:  .6s;
+	-o-transition: .6s;
+	-ms-transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+}
+.hot_box .all_i,.hot_mel .all_i{
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background: #19ba95;
+	display: block;
+	transition: .6s;
+	-o-transition: .6s;
+	-ms-transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+}
+.hot_box .i_t{
+	top: -1px;
+	left: 50%;
+}
+.hot_box .i_r{
+	top: 50%;
+	width: 2px;
+	height: 0%;
+	right: -1px;
+}
+.hot_box .i_b{
+	bottom: -1px;
+	left: 50%;
+}
+.hot_box .i_l{
+	top: 50%;
+	width: 2px;
+	height: 0%;
+	left: -1px;
+}
+.hot_box:hover .i_t,.hot_box:hover .i_b{
+	left: 0;
+	width: 100%;
+}
+.hot_box:hover .i_r,.hot_box:hover .i_l{
+	top: 0;
+	height: 100%;
+}
+.hot_box:hover{
+	transform:translateY(-10px);
+	-o-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	-webkit-transform: translateY(-10px);
+	box-shadow: 0px 3px 5px #000;
+}
+.hot_box:hover img{
+	transform:scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	filter:brightness(1);
+	filter:alpha(brightness(1))
+}
+
+/*hot_meal*/
+.hot_mel{
+	position: relative;
+	float: left;
+	transition:  1s;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
+.mel_palce_bar,.mel_info_bar{
+	float: left;
+	overflow: hidden;
+}
+.mel_palce_bar{
+	padding: 8px;
+	width: 40%;
+	height: 120px;
+}
+.mel_palce_bar img{
+	transition:  .6s;
+	-o-transition: .6s;
+	-ms-transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+}
+.mel_info_bar{
+	padding:8px; 
+	width: 60%;
+}
+.mel_info_bar .mel_title{
+	max-height: 45px;
+	height: 45px;
+	font-size: 15px;
+    overflow: hidden;
+    font-weight: 600;
+    color: #333;
+    text-align: justify;
+    transition:  1s;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+}
+.mel_info_bar .mel_address_bar{
+	color: #666;
+	padding: 5px 0 5px 0;
+}
+.mel_info_bar .mel_date{
+	float: right;
+	font-size: 12px;
+}
+.mel_info_bar .mel_money{
+	text-align: right;
+	font-size: 12px;
+}
+.mel_info_bar .moneys{
+	color:red;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 16px;
+	padding-right:5px; 
+}
+.hot_mel .mel_t{
+	top: -1px;
+	left: 0;
+}
+.hot_mel .mel_r{
+	top:0;
+	width: 2px;
+	height: 0%;
+	right: -1px;
+}
+.hot_mel .mel_b{
+	bottom: -1px;
+	right: 0;
+}
+.hot_mel .mel_l{
+	bottom:0;
+	width: 2px;
+	height: 0%;
+	left: -1px;
+}
+.hot_mel:hover{
+	border-color: #19ba95;
+	box-shadow: 0 0 5px #000;
+}
+.hot_mel:hover .mel_title{
+	color: #19ba95;
+}
+.hot_mel:hover .mel_t,.hot_mel:hover .mel_b{
+	width: 100%;
+}
+.hot_mel:hover .mel_l,.hot_mel:hover .mel_r{
+	height: 100%;
+}
+.hot_mel:hover .mel_palce_bar img{
+	transform:scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+
+
+/*美食*/
+.food_img_bar{
+	position: relative;
+	overflow: hidden;
+}
+.food_img{
+	height: 168px;
+	 transition:  1s;
+	-o-transition: 1s;
+	-ms-transition: 1s;
+	-moz-transition: 1s;
+	-webkit-transition: 1s;
+	filter:brightness(.9);
+	filter:alpha(brightness(.9))
+}
+.food_con{
+	position: absolute;
+	bottom: 4px;
+	right: 10px;
+	color: #fff;
+	padding-left:26px;
+	text-shadow: 0 0 2px rgba(0,0,0,.4);
+	background: url(../images/sprite.png) no-repeat -90px -125px;
+}
+.food_user{
+	position: absolute;
+	top: -25px;
+	left: 10%;
+	width: 50px;
+	height: 50px;
+	border: 4px solid white; 
+	border-radius: 50%;
+}
+.food_info{
+	position: relative;
+}
+.user_con{
+	padding-left:70px;
+	font-size: 12px;
+	color: #666;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.food_name_bar{
+	height: 20px;
+	margin-top: 5px;
+}
+.food_name{
+	float: left;
+	width: 50%;
+	font-size: 16px;
+	font-weight: 600;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.food_address{
+	float: right;
+	text-align: right;
+	width: 50%;
+	line-height: 14px;
+	font-size: 12px;
+	color: #999;
+}
+.foode_bar:hover .food_img{
+	transform:scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	filter:brightness(1);
+	filter:alpha(brightness(1))
+}
+.food_address:hover{
+	color: #4d92d9;
+}
+.food_box{
+	transition: .6s;
+	-o-transition: .6s;
+	-ms-transition: .6s;
+	-moz-transition: .6s;
+	-webkit-transition: .6s;
+}
+.food_box:hover{
+	box-shadow: 0 2px 5px #000;
+}
+
+/*酒店*/
+.hotel_bar{
+	color:#000000;
+}
+.hot_img_box{
+	padding-right: 0;
+}
+.hotel_img_bar{
+	width: 100%;
+	height: 100%;
+}
+.hotel_img_bar img{
+	min-width: 100px;
+	min-height: 163px;
+}
+.hotel_info_bar{
+	min-height: 163px;
+}
+.hotel_title_bar{
+	padding: 5px 0 2px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.hotel_title{
+	margin-right: 10px;
+	font-size: 20px;
+}
+.glyphicon-star{
+	color: #F18F00;
+}
+.hotel_en_title{
+	padding: 0px 0 5px 0;
+	font-size: 12px;
+	color: #999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.hotel_address_bar{
+	padding: 0px 0 5px 0;
+}
+.hotel_address_bar span{
+	font-size: 12px;
+	padding-right: 5px;
+	color: #666;
+}
+.hotel_address_tip{
+	cursor: pointer;
+}
+.hotel_address_tip:hover{
+	color: #0073b6;
+}
+.hotel_int_bar{
+	margin-bottom:5px;
+	height: 36px;
+	text-align: justify;
+	overflow: hidden;
+}
+.hotel_youke{
+	height: 32px;
+}
+.hotel_youke img{
+	float: left;
+	height: 32px;
+	width: 32px;
+	border-radius: 50%;
+}
+.youke_con{
+	float: left;
+	width: 88%;
+	height: 32px;
+	line-height: 32px;
+	padding-left: 2%;
+	font-size: 12px;
+	text-align: justify;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.hotel_box{
+	position: relative;
+	transition: .4s;
+	-o-transition: .4s;
+	-ms-transition: .4s;
+	-moz-transition: .4s;
+	-webkit-transition: .4	s;
+}
+.hotel_money_bar{
+	position: absolute;
+	top: 2px;
+	right: 5px;
+	z-index: 2;
+	width: 150px;
+	height: 70px;
+	text-align: right;
+}
+.hot_moneys{
+	float: left;
+	width: 100%;
+	margin-bottom: 7px;
+}
+.hot_money{
+	color: red;
+	font-size: 18px;
+    letter-spacing: 2px;	
+}
+.hotel_btn_buy{
+	background-color: #F18F00;
+	color: #fff;
+	padding: 4px 19px;
+}
+.hotel_btn_buy:hover{
+	background-color:#bf7202;
+	color: #fff;
+}
+
+.hotel_box .all_i{
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background: #19ba95;
+	display: block;
+}
+
+.hotel_box .hotel_t{
+	top:-1px;
+	left: 0;
+}
+.hotel_box .hotel_r{
+	right: -1px;
+	top: 0;
+	width: 2px;
+	height:0%;
+}
+.hotel_box .hotel_l{
+	bottom:0;
+	width: 2px;
+	height: 0%;
+	left: -1px;
+}
+.hotel_box .hotel_b{
+	bottom: -1px;
+	right: 0;
+}
+.hotel_box:hover{
+	box-shadow: 0 2px 5px #000;
+}
+
+/*酒店媒体查询*/
+@media screen and ( max-width: 475px ){
+	.hot_img_box{
+		padding-right: 0;
+	}
+	.hotel_img_bar img{
+		min-width: 100px;
+		min-height: 102px;
+	}
+	.hotel_info_bar{
+		min-height: 102px;
+	}
+	.hotel_title_bar{
+		padding: 0;
+	}
+	.hotel_title{
+		margin-right: 5px;
+		font-size: 12px;
+	}
+	.glyphicon-star{
+		font-size: 10px;
+	}
+	.hotel_en_title{
+		padding: 0;
+		font-size: 10px;
+	}
+	.hotel_address_bar{
+		padding: 0;
+	}
+	.hotel_address_bar span{
+		font-size: 10px;
+		padding-right: 2px;
+	}
+	.hotel_int_bar{
+		padding: 0;
+		height: 20px;
+		font-size: 12px;
+		text-align: justify;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.hotel_youke{
+		height: 25px;
+	}
+	.hotel_youke img{
+		height: 20px;
+		width: 20px;
+	}
+	.youke_con{
+		height: 25px;
+		width: 86%;
+		padding-left: 2%;
+		line-height: 25px;
+		font-size: 10px;
+		text-align: justify;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.hotel_money_bar{
+		top: 5px;
+		right: 5px;
+		width: 70px;
+		height: 50px;
+		text-align: right;
+	}
+	.hot_moneys{
+		font-size: 10px;
+		margin-bottom: 0px;
+	}
+	.hot_money{
+		font-size: 10px;
+		font-weight: 600;
+	}
+	.hotel_btn_buy{
+		height: 20px;
+		font-size:10px ;
+		padding:0;
+	}
+}
+
+/*套餐媒体查询*/
+@media screen and ( min-width: 768px ) and ( max-width: 990px ){
+	.mel_palce_bar {
+	    width: 35%;
+	    height: 100px;
+	}
+	.mel_info_bar{
+	    height: 100px;
+		width: 65%;
+	}	
+	.mel_info_bar .mel_date{
+		font-size: 10px;
+	}
+	.mel_address{
+		font-size: 10px;
+	}
+	.mel_info_bar .mel_money{
+		font-size: 10px;
+	}
+	.mel_info_bar .moneys{
+		font-size: 12px;
+	}
+	.mel_info_bar .mel_address_bar {
+	    padding: 0;
+	}
+}

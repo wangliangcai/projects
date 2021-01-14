@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title></title>
+		<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/??sm.min.css,sm-extend.min.css">
+	    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="css/tanchuceng.css"/>
+		<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sf.js" type="text/javascript" charset="utf-8"></script>
+		<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/??sm.min.js,sm-extend.min.js' charset='utf-8'></script>
+	</head>
+	<body>
+		<div class="page">
+			   <header class="bar bar-nav">
+				    <a class="button button-link button-nav pull-left" href="#" data-transition='slide-out'>
+				      <span class="icon">X</span>
+				    </a>
+				   <a class="button button-link button-nav pull-right" href="/demos/card" data-transition='slide-out'>
+				      <span class="icon"><img src="img/icon-me03.png"/></span>
+				    </a>
+				    <!--<h1 class="title">个人中心</h1>-->
+				  </header>
+			  
+			  <div class="content signin">
+			    
+			    <div class="sign-in">
+			    	<div class="sign-imgs">
+			    		<img src="img/logo1.png" />
+			    	</div>
+			    	
+			    	<div class="sign-boxing">
+			    		<i class="sign-biao"></i>
+			    		<input type="text" name="" id="" value="" placeholder="01234567" class="sign-name"/>
+			    		<p class="sign-nam">请输入完整的工号！</p>
+			    	</div>
+			    	<div class="sign-boxing">
+			    		<i class="sign-Pass"></i>
+			    		<i class="sign-xianmi"></i>
+			    		<input type="password" name="" id="" value="" placeholder="初始为身份证后6位" class="sign-Password"/>
+			    		<p class="sign-mima">密码错误！</p>
+			    	</div>
+			    	<div class="sign-buttonanniu">
+			    		<i class="sign-logosf"></i>
+			    	<button class="sign-button">立即登录</button>
+			    </div>
+			    <div class="sign-yiwen">
+			    	<p class="sign-yiwenul"><span class="sign-liyiwen"></span>登录疑问</p>
+			    </div>
+			    	</div>
+			    
+		 </div>
+		 <!--登录问题弹出框-->
+			    <div class="yiwen-diceng">
+			    	<div class="yiwen-signm">
+			    		<div class="yiwen-text">
+			    			<h4 class="wen-yi wen-yi0">问题一</h4>
+			    			<p class="yi-duanL">河西莉子李丽珍前田希美桥本环奈美山兰子加藤鹰未来穗香北川景子绫濑遥水原希子堀北真希斋藤飞鸟河西莉子李丽珍前田希美桥本环奈美山兰子加藤鹰未来穗香北川景子绫濑遥水原希子堀北真希斋藤飞鸟</p>
+			    		</div>
+			    		<div class="yiwen-text">
+			    			<h4 class="wen-yi wen-yi1">问题二</h4>
+			    			<p class="yi-duanL">河西莉子李丽珍前田希美桥本环奈美山兰子加藤鹰未来穗香北川景子绫濑遥水原希子堀北真希斋藤飞鸟</p>
+			    		</div>
+			    		<div class="yiwen-text">
+			    			<h4 class="wen-yi wen-yi2">问题三</h4>
+			    			<p class="yi-duanL">
+			    				河西莉子李丽珍前田希美桥本环奈美山兰子加藤鹰未来穗香北川景子绫濑遥水原希子堀北真希斋藤飞鸟
+			    			河西莉子李丽珍前田希美桥本环奈美山兰子加藤鹰未来穗香北川景子绫濑遥水原希子堀北真希斋藤飞鸟</p>
+			    		</div>
+			    		<div class="yiwen-text">
+			    			<h4 class="wen-yi wen-yi3">问题四</h4>
+			    			<p class="yi-duanL">
+			    				河西莉子李丽珍前田希美桥本环奈美山兰子加藤鹰未来穗香北川景子绫濑遥水原希子堀北真希斋藤飞鸟
+			    				河西莉子李丽珍前田希美桥本环奈美山兰子加藤鹰未来穗香北川景子绫濑遥水原希子堀北真希斋藤飞鸟</p>
+			    		</div>
+			    		<input type="text" name="" id="" value="关闭" class="yiwen-on" />
+			    	</div>
+			    </div>
+	</div>
+	
+	</body>
+</html>
+<script type="text/javascript">
+	
+	$(function(){
+	    $(".sign-xianmi").click(function() {
+	        $(this).siblings('sign-xiannmi').removeClass('sign-yincg');  // 删除其他兄弟元素的样式
+	        $(this).addClass('sign-yincg');                            // 添加当前元素的样式
+	    });
+	
+	}); 
+	
+	$(document).ready(function($){
+		$(".sign-yiwenul").click(function(){
+			$(".yiwen-diceng").fadeIn("linea");
+			$(".yiwen-signm").slideDown(200);
+		})
+		$(".yiwen-on").click(function(){
+			$(".yiwen-diceng").fadeOut("linea");
+			$(".yiwen-signm").slideUp(200);
+		})
+	})
+</script>
+
+

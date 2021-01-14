@@ -1,0 +1,267 @@
+.youji_box{
+	width: 100%;
+	box-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+.youji_box_img{
+	width: 100%;
+	height: 450px;
+}
+.youji_box_user{
+	position: relative;
+	width: 100%;
+	height: 80px;
+}
+.youji_box_user_user_img{
+	position: absolute;
+	left: 0;
+	top: -85px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 5px solid #fff;
+}
+.youji_box_user_user_name{
+	position: absolute;
+	left: 160px;
+	top: 10px;
+	color: red;
+	font-size: 15px;
+}
+.youji_box_user_youji_name{
+	position: absolute;
+	left: 180px;
+	top: -65px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 30px;
+}
+.youji_box_user_youji_counts i{
+	font-style: normal;
+	color: #666;
+}
+.youji_box_user_youji_counts{
+	position: absolute;
+	left: 160px;
+	top: 30px;
+	font-size: 15px;
+}
+.youji_box_user_youji_address{
+	margin-right:5px;
+}
+.youji_box_user_youji_counts_a{
+	position: absolute;
+	right: 0;
+	top: 15px;
+}
+.youji_link_a_pinlun_ico {
+	display: inline-block;
+	width: 24px;
+	height: 25px;
+	background: url(../images/hotel-detail-icon7.png) no-repeat -70px -245px;
+}
+.youji_link_a_zan_ico {
+	font-size: 25px;
+	color: #ff9d00;
+}
+.youji_link_a_pinlun{
+	margin-right: 20px;
+}
+
+
+.youji_panel{
+	margin-top: 20px;
+}
+.youji_panel_title h3,.youji_panel_address_info_bar h3{
+	padding-bottom: 10px;
+}
+.youji_panel_title h3,.youji_panel_address_info_bar h3{
+	border-bottom: 2px dashed #aaa;
+}
+.youji_panel_address_info_bar i{
+	font-style: normal;
+	font: inherit;
+}
+.youji_address_flag{
+	padding: 5px 0 5px 0px;
+	color: green;
+}
+.youji_panel_content{
+	padding: 15px;
+	text-align: justify;
+	font-size: 14px;
+	color: deepskyblue;
+	text-indent: 28px;
+}
+.youji_panel_address_info_con_bar{
+	padding: 15px;
+}
+.youji_panel_address_info_con{
+	margin-top: 5px;
+	text-align: justify;
+	font-size: 14px;
+	text-indent: 28px;
+}
+
+
+
+.youji_panel_mark_title{
+	font-size: 16px;
+}
+.youji_panel_mark_title i{
+	font-size: 15px;
+	margin-right: 5px;
+	color: deepskyblue;
+}
+.youji_panel_mark_list_bar{
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: justify;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+.youji_panel_mark_list{
+	display:inline-block;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	color: white;
+	background: #ff9d00;
+	border: 1px solid #fff;
+}
+.youji_panel_mark_con{
+	font-size: 14px;
+	color: #666;
+}
+.youji_panel_mark_list_bar:hover{
+	padding-left: 15px;
+}
+
+
+
+.youji_panel_pinlun_box{
+	padding: 15px;
+	border-bottom: 1px dashed #ddd;
+}
+
+.youji_panel_pinlun_user{
+	text-align: center;
+	padding: 0;
+}
+.youji_panel_pinlun_info{
+	padding: 0;
+}
+.youji_panel_pinlun_user img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.youji_panel_pinlun_user_name{
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	color: #ff9d00;
+}
+.youji_panel_pinlun_user_con{
+	text-align: justify;
+}
+.youji_panel_pinlun_user_counts{
+	color: #666;
+}
+
+
+
+
+
+
+
+.youji_dianping{
+	width: 250px;
+	height: 200px;
+	background: white;
+	position: fixed;
+	right: -250px;
+	bottom: 200px;
+	border-radius:10px 0 0px 10px;
+	
+}
+#youji_sub{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 40px;
+	width: 100%;
+	background: #ff9d00;
+	border: none;
+	font-size: 20px;
+	color: white;
+	letter-spacing: 5px;
+	border-radius: 0 0 0px 10px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+#youji_sub:hover{
+	background: #cc810b;
+}
+#youji_sub:focus{
+	border: none;
+	outline: none;
+}
+#youji_dianping_con{
+	width: 100%;
+	height: 66%;
+	padding:5px;
+	text-align: justify;
+	resize:none;
+	letter-spacing: 2px;
+	background: #efefef;
+	resize: none;
+	border: #ff9d00;
+	outline: #ff9d00;
+}
+.youji_link_pinlun_btn{
+	top: 2px;
+	text-align: right;
+	height: 29px;
+	line-height: 29px;
+	background: #fff;
+}
+.youji_link_pinlun_btn i{
+	border: 1px solid #ff9d00;
+	border-radius: 50%;
+}
+
+.youji_box_user_youji_counts_ab{
+	position: fixed;
+	bottom: 75px;
+	right: 10px;
+	text-align: center;
+	background: #F8F8F8;
+	border: 4px solid #efefef;
+	padding: 5px;
+	display: none;
+	
+}
+.youji_link_a_pinlun_b,.youji_link_a_zan_b{
+	display: block;
+	margin-bottom: 5px;
+}
+.youji_link_a_pinlun_b:hover,.youji_link_a_zan_b:hover{
+	color: #ff9d00;
+}
+.youji_link_a_pinlun_wenzi,.youji_link_a_zan_wenzi{
+	display: block;
+}
